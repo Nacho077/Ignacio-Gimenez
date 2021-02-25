@@ -1,0 +1,26 @@
+.container_app{
+    background: #000;
+}
+.container_navBar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: black;
+    z-index: 10;
+}
+.line{
+    background: white;
+    width: 60%;
+    height: 1px;
+    margin: auto;
+    margin-top: 50px;
+}
+.line_nav{
+    margin: auto;
+}
+.container_port{
+    margin-top: 59px;
+}
+.separator{
+    height: 50px;
+}

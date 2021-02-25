@@ -1,0 +1,26 @@
+{
+    "nav": {
+        "about": "Sobre mi",
+        "skills": "Habilidades",
+        "projects": "Proyectos",
+        "contact": "Contactame"
+    },
+    "presentation": {
+        "resume": "Estoy comenzando en el mundo de IT como Desarrollador Full Stack, y tengo muchas ganas de aprender"
+    },
+    "skills": {
+        "title": "Habilidades"
+    },
+    "projects": {
+        "title": "Mis projectos",
+        "subtitle": "Estos son algunos de los proyectos en los que trabajé",
+        "Henry-World-Web": "Version web de Henry World en la que los administradores y profesores pueden realizar cambios de una manera comoda y con mayor rapidez",
+        "Henry-World-App": "Version para celulares de Henry World que funciona como un campuss virtual, en la que los alumnos pueden ingresar a ver sus clases, sus grupos, profesores y mas",
+        "Wultur": "E-commerce sobre cursos de programación en el que se pueden comprar productos, puntuarlos y agregar o eliminar siendo administrador",
+        "Mercado-Henry": "Clon de Mercado Libre, donde se puede ver la especificación de los productos traido por la su API",
+        "Poke-Page": "Pokedex en la que puedes revisar todos los pokemons con sus detalles, las distintas pokedex, regiones y peliculas de pokemon",
+        "repo": "Visitar repositorio",
+        "site": "Visitar sitio web",
+        "footer": "Si quieres ver todos mis proyectos visita mi Github"
+    }
+}

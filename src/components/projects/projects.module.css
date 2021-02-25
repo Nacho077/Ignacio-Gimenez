@@ -1,0 +1,26 @@
+.subtitle{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 28px;
+}
+.footer{
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    padding: 30px;
+}
+.container_btn{
+    text-align: center;
+}
+.btn{
+    padding: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    background: blue;
+    box-shadow: 5px 5px red;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}

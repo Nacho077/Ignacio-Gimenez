@@ -1,0 +1,27 @@
+{
+    "nav": {
+        "title": "Hello World",
+        "about": "About Me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact me"
+    },
+    "presentation":{
+        "resume": "I am starting in the IT world as a Full Stack Developer, and I really want to learn"
+    },
+    "skills": {
+        "title": "Skills"
+    },
+    "projects": {
+        "title": "My proyects",
+        "subtitle": "These are some of the projects I have worked on",
+        "Henry-World-Web": "Henry World web version in which administrators and teachers can make changes more conveniently and quickly",
+        "Henry-World-App": "Mobile version of Henry World that works as a virtual campus, in which students can enter to see their classes, their groups, teachers and more",
+        "Wultur": "E-commerce on programming courses in which you can buy products, rate them and add or delete being an administrator",
+        "Mercado-Henry": "Mercado Libre clone, where you can see the specification of the products brought by its API",
+        "Poke-Page": "Pokedex in which you can review all the pokemons with their details, the different pokedex, regions and pokemon movies",
+        "repo": "Visit repository",
+        "site": "Visit website",
+        "footer": "If you want to see all my projects visit my Github"
+    }
+}

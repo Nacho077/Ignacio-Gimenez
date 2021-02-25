@@ -1,0 +1,56 @@
+.container_logo{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column
+}
+.img{
+    width: 150px;
+    height: 150px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.express
+{
+    filter: invert();
+}
+.nodeJS,
+.redux,
+.javaScript
+{
+    filter: brightness(10);
+}
+.react,
+.typeScript,
+.java
+{
+    filter: invert() brightness(10);
+}
+.material-Ui
+{
+    filter: grayscale(100%) brightness(10);
+}
+.css3,
+.html5,
+.firebase,
+.postgreSQL
+{
+    filter: grayscale(100%) saturate(200%);
+}
+.subtitle{
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+.container_logo:hover{
+    background: white;
+    box-shadow: 10px 10px red;
+}
+.container_logo:hover .img{
+    filter: none;
+}
+.container_logo:hover .subtitle{
+    color: black;
+}

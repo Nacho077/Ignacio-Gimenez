@@ -1,0 +1,44 @@
+.container_main{
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.container_photo{
+    margin-top: 50px;
+    background: red;
+    width: 300px;
+    height: 300px;
+}
+.container_resume{
+    display: flex;
+    flex-direction: column;
+}
+.container_name{
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    font-size: 50px;
+    color: white;
+}
+.resume{
+    margin: auto;
+    margin-top: 40px;
+    width: 500px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 760px){
+    .container_name > h1{
+        line-height: 120px;
+        margin: auto;
+    }
+    .resume{
+        text-align: center;
+    }
+    .container_photo{
+        display: none;
+    }
+}
