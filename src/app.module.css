@@ -1,22 +1,19 @@
 .container_app{
-    background: #000;
+    background: #101010;
 }
 .container_navBar{
     position: fixed;
     width: 100%;
     top: 0;
-    background: black;
+    background: #101010;
     z-index: 10;
 }
 .line{
     background: white;
-    width: 60%;
+    width: 100%;
     height: 1px;
     margin: auto;
-    margin-top: 50px;
-}
-.line_nav{
-    margin: auto;
+    margin-top: 0px;
 }
 .container_port{
     margin-top: 59px;

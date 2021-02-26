@@ -1,9 +1,8 @@
 .container_main{
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 10px;
-    height: 3em;
-    background: #000;
+    justify-content: space-between;
+    height: 4em;
+    background: #101010;
 }
 /* Menu */
 .container_icon{
@@ -12,24 +11,26 @@
     cursor: pointer;
 }
 .container_links{
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .link{
-    padding: 10px;
-    margin-left: 10px;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
     text-decoration: none;
     color: #FFF;
     text-transform: uppercase;
     font-weight: bolder;
 }
 .link:hover{
-    color: palevioletred;
-    border-bottom: 5px solid pink;
+    background-image: linear-gradient(90deg, rgba(255, 0, 0, .7), rgb(255, 255, 0));
+    background-clip: text;
+    color: transparent;
 }
 .close_icon{
-    display: none;
+    opacity: 0;
 }
 /* Switch */
 .checkbox{
@@ -38,6 +39,7 @@
 .switch_btn{
     width: 80px;
     height: 40px;
+    margin-top: 10px;
     background: #e5e5e5;
     position: relative;
     cursor: pointer;

@@ -1,0 +1,23 @@
+.container_main{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+.container_links{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.link{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+.text{
+    font-size: 26px;
+    margin-left: 50px;
+}

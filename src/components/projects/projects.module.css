@@ -1,14 +1,11 @@
+.container_main{
+    margin-bottom: 50px;
+}
 .subtitle{
     color: white;
     text-align: center;
     margin-top: 40px;
     font-size: 28px;
-}
-.footer{
-    color: white;
-    font-size: 26px;
-    text-align: center;
-    padding: 30px;
 }
 .container_btn{
     text-align: center;

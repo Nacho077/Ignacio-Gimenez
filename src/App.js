@@ -7,9 +7,11 @@ import NavBar from './components/NavBar'
 import Presentation from './components/presentation'
 import Skills from './components/skills'
 import Projects from './components/projects'
+import Contact from './components/contact'
 
 //app
-const App = () => (<div className={s.container_app}>
+const App = () => (
+  <div className={s.container_app}>
     <div className={s.container_navBar}>
       <NavBar />
       <div className={`${s.line} ${s.line_nav}`}></div>
@@ -21,6 +23,11 @@ const App = () => (<div className={s.container_app}>
       <div className={s.line}></div>
       <div id="projects" className={s.separator}></div>
       <Projects />
+      <div className={s.line}></div>
+      <div id="contact" className={s.separator}></div>
+      <Contact />
+      <div className={s.separator}></div>
+      <div className={s.separator}></div>
     </div>
   </div>
 )

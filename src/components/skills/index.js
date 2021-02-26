@@ -16,6 +16,7 @@ import postgreSQL from '../../imgs/logos/postgresql.svg'
 import react from '../../imgs/logos/react.svg'
 import redux from '../../imgs/logos/redux.svg'
 import typeScript from '../../imgs/logos/typescript.svg'
+import sequelize from '../../imgs/logos/sequelize.svg'
 
 
 const Skills = () => {
@@ -27,12 +28,14 @@ const Skills = () => {
         [html5, "html5"],
         [java, "java"],
         [javaScript, "javaScript"],
-        [materialUi, "material-Ui"],
+        [materialUi, "material"],
         [nodeJS, "nodeJS"],
         [postgreSQL, "postgreSQL"],
         [react, "react"],
+        ["", "disabled"],
         [redux, "redux"],
-        [typeScript, "typeScript"]
+        [typeScript, "typeScript"],
+        [sequelize, "sequelize"]
     ]
 
     return (

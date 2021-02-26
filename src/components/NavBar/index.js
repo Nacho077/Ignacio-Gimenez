@@ -15,33 +15,6 @@ const NavBar = () => {
         if (val === false) i18n.changeLanguage('es')
     }
 
-    const handleScroll = id => {
-        var goTo =  select(id)
-        console.log(goTo)
-
-        if(goTo.top !== 0){
-            window.requestAnimationFrame(handleScroll)
-            window.scrollTo(0, goTo.top)
-        }
-
-        setVisibleMenu(false)
-    }
-
-    const select = id => {
-        switch(id){
-            case "about":
-                return document.getElementById("about").getBoundingClientRect()
-            case "skills":
-                return document.getElementById("skills").getBoundingClientRect()
-            case "projects":
-                return document.getElementById("projects").getBoundingClientRect()
-            case "contact":
-                return document.getElementById("contact").getBoundingClientRect()
-            default:
-                break
-        }
-    }
-
     const routes = ["about", "skills", "projects", "contact"]
 
     return (
@@ -54,13 +27,14 @@ const NavBar = () => {
             </div>
             <div className={`${s.container_links} ${visibleMenu ? s.menu_mobile : ''}`}>
                 {routes.map(route => (
-                    <span
+                    <a
+                        href={`#${route}`}
                         className={s.link}
                         key={route}
-                        onClick={() => handleScroll(route)}
+                        onClick={() => setVisibleMenu(false)}
                     >
                         {t(`nav.${route}`)}
-                    </span>
+                    </a>
                 ))}
                 <CloseIcon
                     fontSize="large"

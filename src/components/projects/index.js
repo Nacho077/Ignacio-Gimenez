@@ -70,17 +70,6 @@ const Projects = () => {
                     <Card project={p} i={i} />
                 </div>
             ))}
-            <p className={s.footer}>{t("projects.footer")}</p>
-            <div className={s.container_btn}>
-            <a
-                className={s.btn}
-                href="https://github.com/Nacho077"
-                target="_blank"
-                rel="noreferrer"
-            >
-                Github
-            </a>
-            </div>
         </div>
     )
 }

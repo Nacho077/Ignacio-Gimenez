@@ -1,13 +1,13 @@
 .container_logo{
-    width: 250px;
-    height: 300px;
+    width: 150px;
+    height: 200px;
     display: flex;
     flex-direction: column
 }
 .img{
-    width: 150px;
-    height: 150px;
-    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+    margin-left: 25px;
     margin-top: 30px;
 }
 .express
@@ -26,7 +26,7 @@
 {
     filter: invert() brightness(10);
 }
-.material-Ui
+.material
 {
     filter: grayscale(100%) brightness(10);
 }
@@ -37,12 +37,19 @@
 {
     filter: grayscale(100%) saturate(200%);
 }
+.sequelize
+{
+    filter: grayscale(100%) saturate(200%) brightness(2);
+}
+.disabled_{
+    opacity: 0;
+}
 .subtitle{
     color: white;
     text-transform: capitalize;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 0px;
+    font-size: 26px;
+    margin-bottom: 0;
 }
 .container_logo:hover{
     background: white;
