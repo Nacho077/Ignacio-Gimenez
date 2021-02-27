@@ -11,6 +11,13 @@ import MercadoHenry from '../../imgs/projects/MercadoHenry.png'
 import PokePage from '../../imgs/projects/PokePage.png'
 
 //skills
+import css3 from '../../imgs/logos/css3.svg'
+import firebase from '../../imgs/logos/firebase.svg'
+import materialUi from '../../imgs/logos/material-ui.svg'
+import postgreSQL from '../../imgs/logos/postgresql.svg'
+import react from '../../imgs/logos/react.svg'
+import redux from '../../imgs/logos/redux.svg'
+import typeScript from '../../imgs/logos/typescript.svg'
 
 const Projects = () => {
     const { t } = useTranslation('common')
@@ -22,7 +29,12 @@ const Projects = () => {
             title: "Henry-World-Web",
             links: {
                 site: "https://henry-app.vercel.app/"
-            }
+            },
+            skills: [
+                {logo: react, name: "React"},
+                {logo: redux, name: "Redux"},
+                {logo: firebase, name: "Firebase"},
+            ]
         },
         {
             img: HenryWorldApp,
@@ -31,7 +43,12 @@ const Projects = () => {
             config: { marginTop: "50px" },
             links: {
                 site: "https://expo.io/accounts/eameo/builds/9c4b55aa-d259-4ab9-bf07-70e094df3830"
-            }
+            },
+            skills: [
+                {logo: react, name: "React Native"},
+                {logo: redux, name: "Redux"},
+                {logo: firebase, name: "Firebase"},
+            ]
         },
         {
             img: Wultur,
@@ -39,7 +56,12 @@ const Projects = () => {
             title: "Wultur",
             links: {
                 site: "https://wultur.herokuapp.com/"
-            }
+            },
+            skills: [
+                {logo: react, name: "React"},
+                {logo: materialUi, name: "Material-Ui"},
+                {logo: postgreSQL, name: "PostgreSQL"},
+            ]
         },
         {
             img: MercadoHenry,
@@ -48,7 +70,12 @@ const Projects = () => {
             links: {
                 repo: "https://github.com/Nacho077/MercadoHenry",
                 site: "https://mercadohenry.herokuapp.com/"
-            }
+            },
+            skills: [
+                {logo: react, name: "React"},
+                {logo: css3, name: "CSS3"},
+                {logo: postgreSQL, name: "PostgreSQL"},
+            ]
         },
         {
             img: PokePage,
@@ -57,7 +84,12 @@ const Projects = () => {
             links: {
                 repo: "https://nacho077.github.io/PokePage",
                 site: "https://github.com/Nacho077/PokePage"
-            }
+            },
+            skills: [
+                {logo: typeScript, name: "TypeScript"},
+                {logo: react, name: "React"},
+                {logo: redux, name: "Redux"},
+            ]
         }
     ]
 

@@ -17,7 +17,8 @@ const App = () => (
       <div className={`${s.line} ${s.line_nav}`}></div>
     </div>
     <div className={s.container_port}>
-      <div id="about"><Presentation /></div>
+      <div id="about" className={s.separator}></div>
+      <div><Presentation /></div>
       <div id="skills" className={s.separator}></div>
       <Skills />
       <div className={s.line}></div>
