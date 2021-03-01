@@ -7,9 +7,31 @@ const Card = ({ project: { img, size, title, config, links, skills }, i }) => {
     const name = title.split("-").join(" ")
 
     return (
-        <div className={s.container_main} style={{ flexDirection: i % 2 === 0 ? 'row' : 'row-reverse' }}>
-            <div className={s.container_img} style={{ flexDirection: i % 2 === 0 ? 'row-reverse' : 'row' }}>
-                <img src={img} alt={title} style={size} />
+        <div
+            id={title}
+            className={s.container_main}
+        >
+            <div
+                className={s.container_img}
+                style={{ flexDirection: i % 2 === 0 ? 'row-reverse' : 'row' }}
+            >
+                <iframe
+                    className={s.frame}
+                    title={title}
+                    width={size.width}
+                    height={size.height}
+                    src="https://www.youtube.com/embed/hCJxxWYFeKA?rel=0&controls=0&loop=1"
+                    frameBorder="0"
+                >
+                </iframe>
+                <img
+                    src={img}
+                    alt={title}
+                    style={{
+                        height: size.height,
+                        width: size.width,
+                        transform: `translateX(${i % 2 !== 0 ? '-' : ''}120px)`
+                    }} />
                 <div className={s.container_logos} style={{ height: size.height }}>
                     {skills.map(skill => (
                         <div key={skill.name} className={s.container_skill}>
@@ -18,16 +40,6 @@ const Card = ({ project: { img, size, title, config, links, skills }, i }) => {
                         </div>
                     ))}
                 </div>
-                {/* <div className={s.container_video}>
-                    <video
-                    width={size.width}
-                    height={size.height}
-                    autoPlay
-                    muted
-                    src="https://dms.licdn.com/playlist/C4D05AQHDiMrw6EA1sQ/mp4-720p-30fp-crf28/0/1614086253939?e=1614538800&v=beta&t=lk4DKN-R9v95fhoQrVeaTEPOV73MpbzHCJfRQgnSxsQ"
-                    >
-                    </video>
-                </div> */}
             </div>
             <div className={s.container_description} style={config}>
                 <div>

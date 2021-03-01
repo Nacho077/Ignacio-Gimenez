@@ -23,5 +23,8 @@
         "site": "Visitar sitio web",
         "footer": "Si quieres ver todos mis proyectos visita mi Github"
     },
-    "contact": "Contáctame"
+    "contact": {
+        "title": "Contáctame",
+        "message": "Mensaje"
+    }
 }

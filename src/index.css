@@ -32,3 +32,10 @@ code {
   text-transform: uppercase;
   font-size: 40px;
 }
+
+@media (max-width: 760px){
+  .title{
+    font-size: 22px;
+    width: 50%;
+  }
+}

@@ -31,9 +31,9 @@ const Projects = () => {
                 site: "https://henry-app.vercel.app/"
             },
             skills: [
-                {logo: react, name: "React"},
-                {logo: redux, name: "Redux"},
-                {logo: firebase, name: "Firebase"},
+                { logo: react, name: "React" },
+                { logo: redux, name: "Redux" },
+                { logo: firebase, name: "Firebase" },
             ]
         },
         {
@@ -45,9 +45,9 @@ const Projects = () => {
                 site: "https://expo.io/accounts/eameo/builds/9c4b55aa-d259-4ab9-bf07-70e094df3830"
             },
             skills: [
-                {logo: react, name: "React Native"},
-                {logo: redux, name: "Redux"},
-                {logo: firebase, name: "Firebase"},
+                { logo: react, name: "React Native" },
+                { logo: redux, name: "Redux" },
+                { logo: firebase, name: "Firebase" },
             ]
         },
         {
@@ -58,9 +58,9 @@ const Projects = () => {
                 site: "https://wultur.herokuapp.com/"
             },
             skills: [
-                {logo: react, name: "React"},
-                {logo: materialUi, name: "Material-Ui"},
-                {logo: postgreSQL, name: "PostgreSQL"},
+                { logo: react, name: "React" },
+                { logo: materialUi, name: "Material-Ui" },
+                { logo: postgreSQL, name: "PostgreSQL" },
             ]
         },
         {
@@ -72,9 +72,9 @@ const Projects = () => {
                 site: "https://mercadohenry.herokuapp.com/"
             },
             skills: [
-                {logo: react, name: "React"},
-                {logo: css3, name: "CSS3"},
-                {logo: postgreSQL, name: "PostgreSQL"},
+                { logo: react, name: "React" },
+                { logo: css3, name: "CSS3" },
+                { logo: postgreSQL, name: "PostgreSQL" },
             ]
         },
         {
@@ -86,9 +86,9 @@ const Projects = () => {
                 site: "https://github.com/Nacho077/PokePage"
             },
             skills: [
-                {logo: typeScript, name: "TypeScript"},
-                {logo: react, name: "React"},
-                {logo: redux, name: "Redux"},
+                { logo: typeScript, name: "TypeScript" },
+                { logo: react, name: "React" },
+                { logo: redux, name: "Redux" },
             ]
         }
     ]
@@ -97,11 +97,13 @@ const Projects = () => {
         <div className={s.container_main}>
             <h1 className="title">{t("projects.title")}</h1>
             <h3 className={s.subtitle}>{t("projects.subtitle")}</h3>
-            {projects.map((p, i) => (
-                <div key={i}>
-                    <Card project={p} i={i} />
-                </div>
-            ))}
+            <div className={s.container_projects}>
+                {projects.map((p, i) => (
+                    <div key={i}>
+                        <Card project={p} i={i} />
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

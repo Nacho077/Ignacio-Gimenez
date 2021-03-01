@@ -9,6 +9,7 @@
     display: none;
     color: #FFF;
     cursor: pointer;
+    padding-top: 15px;
 }
 .container_links{
     width: 100%;
@@ -84,6 +85,7 @@
         color: white;
         cursor: pointer;
         display: unset;
+        opacity: 1;
     }
     .container_links{
         flex-direction: column;
@@ -110,3 +112,4 @@
         left: 0;
     }
 }
+

@@ -32,7 +32,6 @@ const Skills = () => {
         [nodeJS, "nodeJS"],
         [postgreSQL, "postgreSQL"],
         [react, "react"],
-        ["", "disabled"],
         [redux, "redux"],
         [typeScript, "typeScript"],
         [sequelize, "sequelize"]

@@ -9,6 +9,7 @@
     height: 100px;
     margin-left: 25px;
     margin-top: 30px;
+    transition: none;
 }
 .express
 {
@@ -40,9 +41,6 @@
 .sequelize
 {
     filter: grayscale(100%) saturate(200%) brightness(2);
-}
-.disabled_{
-    opacity: 0;
 }
 .subtitle{
     color: white;

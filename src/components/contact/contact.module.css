@@ -1,9 +1,73 @@
 .container_main{
     width: 100%;
-    height: 200px;
     display: flex;
     flex-direction: column;
-    align-items: space-between;
+    align-items: center;
+}
+.container_form{
+    margin-top: 100px;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.container_input{
+    position: relative;
+    margin-bottom: 25px;
+}
+.label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    pointer-events: none;
+    color: white;
+}
+.input{
+    padding: 8px 0 5px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+.input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e78133;
+}
+.container_input .input:focus ~ .label,
+.container_input .input:valid ~ .label{
+    top: -12px;
+    font-size: 12px;
+}
+.textarea{
+    padding: 10px;
+    resize: none;
+    background: transparent;
+    border: 1px solid #555;
+    color: white;
+    outline: none;
+    height: 200px;
+
+}
+.textarea:focus{
+    border: 1px solid #e78133;
+}
+.btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    padding: 8px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+.btn:hover{
+    width: 150px;
+    height: 50px;
+    background: white;
+    box-shadow: 5px 5px red;
 }
 .container_links{
     width: 100%;
@@ -20,4 +84,15 @@
 .text{
     font-size: 26px;
     margin-left: 50px;
+}
+
+@media (max-width: 850px){
+    .container_links{
+        flex-direction: column;
+        align-items: center;
+    }
+    .text{
+        font-size: 22px;
+        margin-left: 10px;
+    }
 }

@@ -8,15 +8,30 @@
     row-gap: 20px;
     padding-bottom: 50px;
 }
+.container_logos div:nth-child(11){
+    grid-column: 2 / 3;
+}
 
 @media (max-width: 1200px){
     .container_logos{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 300px);
     }
 }
 
-@media (max-width: 870px){
+@media (max-width: 890px){
+    .container_logos{
+        grid-template-columns: repeat(2, 300px);
+        margin: 100px 20%;
+    }
+}
+
+@media (max-width: 700px){
     .container_logos{
         grid-template-columns: repeat(2, 1fr);
+        margin: 100px 0;
+        margin: 100px 20px;
+    }
+    .container_logos div:nth-child(11){
+        grid-column: 1 / 2;
     }
 }
