@@ -85,6 +85,10 @@
     font-size: 26px;
     margin-left: 50px;
 }
+.container_links .link:nth-child(3) .text{
+    font-size: 20px;
+    margin-left: 0;
+}
 
 @media (max-width: 850px){
     .container_links{

@@ -55,7 +55,7 @@ const Contact = () => {
                     name="text"
                     value={state.text}
                     placeholder={t('contact.message')}
-                    autocapitalize="sentences"
+                    autoCapitalize="sentences"
                     onChange={e => handleChanges(e)}
                     required
                     style={{

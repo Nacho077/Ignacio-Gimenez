@@ -8,7 +8,7 @@
     overflow: hidden;
 }
 .container_img{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     position: relative;
@@ -89,9 +89,10 @@
         align-items: center;
         margin: auto;
         margin-top: 50px;
+        padding: 0;
     }
     .container_description{
-        width: 100%;
+        width: 90%;
     }
     .title{
         text-align: center;

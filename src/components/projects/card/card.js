@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import s from './card.module.css'
 
-const Card = ({ project: { img, size, title, config, links, skills }, i }) => {
+const Card = ({ project: { img, size, title, config, links, skills, video }, i }) => {
     const { t } = useTranslation('common')
     const name = title.split("-").join(" ")
 
@@ -15,15 +15,15 @@ const Card = ({ project: { img, size, title, config, links, skills }, i }) => {
                 className={s.container_img}
                 style={{ flexDirection: i % 2 === 0 ? 'row-reverse' : 'row' }}
             >
-                <iframe
+                <video
                     className={s.frame}
                     title={title}
                     width={size.width}
                     height={size.height}
-                    src="https://www.youtube.com/embed/hCJxxWYFeKA?rel=0&controls=0&loop=1"
-                    frameBorder="0"
+                    controls
                 >
-                </iframe>
+                    <source src={video} type="video/mp4"/>
+                </video>
                 <img
                     src={img}
                     alt={title}

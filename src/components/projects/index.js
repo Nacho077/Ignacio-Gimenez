@@ -19,13 +19,19 @@ import react from '../../imgs/logos/react.svg'
 import redux from '../../imgs/logos/redux.svg'
 import typeScript from '../../imgs/logos/typescript.svg'
 
+//videos
+import HenryWorldWebVideo from '../../vids/HenryWorldWeb.mp4'
+import WulturVideo from '../../vids/Wultur.mp4'
+import MercadoHenryVideo from '../../vids/MercadoHenry.mp4'
+import PokePageVideo from '../../vids/Pokepage.mp4'
+
 const Projects = () => {
     const { t } = useTranslation('common')
 
     const projects = [
         {
             img: HenryWorldWeb,
-            size: { width: "400px", height: "250px" },
+            size: { width: "300px", height: "250px" },
             title: "Henry-World-Web",
             links: {
                 site: "https://henry-app.vercel.app/"
@@ -34,7 +40,8 @@ const Projects = () => {
                 { logo: react, name: "React" },
                 { logo: redux, name: "Redux" },
                 { logo: firebase, name: "Firebase" },
-            ]
+            ],
+            video: HenryWorldWebVideo
         },
         {
             img: HenryWorldApp,
@@ -48,11 +55,12 @@ const Projects = () => {
                 { logo: react, name: "React Native" },
                 { logo: redux, name: "Redux" },
                 { logo: firebase, name: "Firebase" },
-            ]
+            ],
+            video: HenryWorldWebVideo
         },
         {
             img: Wultur,
-            size: { width: "400px", height: "250px" },
+            size: { width: "300px", height: "250px" },
             title: "Wultur",
             links: {
                 site: "https://wultur.herokuapp.com/"
@@ -61,11 +69,12 @@ const Projects = () => {
                 { logo: react, name: "React" },
                 { logo: materialUi, name: "Material-Ui" },
                 { logo: postgreSQL, name: "PostgreSQL" },
-            ]
+            ],
+            video: WulturVideo
         },
         {
             img: MercadoHenry,
-            size: { width: "400px", height: "250px" },
+            size: { width: "300px", height: "250px" },
             title: "Mercado-Henry",
             links: {
                 repo: "https://github.com/Nacho077/MercadoHenry",
@@ -75,11 +84,12 @@ const Projects = () => {
                 { logo: react, name: "React" },
                 { logo: css3, name: "CSS3" },
                 { logo: postgreSQL, name: "PostgreSQL" },
-            ]
+            ],
+            video: MercadoHenryVideo
         },
         {
             img: PokePage,
-            size: { width: "400px", height: "250px" },
+            size: { width: "300px", height: "250px" },
             title: "Poke-Page",
             links: {
                 repo: "https://nacho077.github.io/PokePage",
@@ -89,7 +99,8 @@ const Projects = () => {
                 { logo: typeScript, name: "TypeScript" },
                 { logo: react, name: "React" },
                 { logo: redux, name: "Redux" },
-            ]
+            ],
+            video: PokePageVideo
         }
     ]
 
