@@ -65,7 +65,8 @@
 @media (max-width: 760px){
     .container_main{
         flex-direction: column-reverse;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        height: 90vh;
     }
     .container_name > h1{
         line-height: 120px;
