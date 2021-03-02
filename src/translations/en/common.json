@@ -31,6 +31,7 @@
         "err": {
             "incomplete": "Complete all field",
             "notEmail": "Make sure to enter a valid email address"
-        }
+        },
+        "sended": "Thank you for contacting me, I will be answering you shortly"
     }
 }

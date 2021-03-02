@@ -23,13 +23,18 @@ const Contact = () => {
     const handleSend = () => {
         const url = "https://backportfolioignaciogimenez.herokuapp.com/email"
         if(!state.input || !state.text) return alert(t('contact.err.incomplete'))
-        if(!/^\S+@\S+\.\S+$/.test(state.input)) return alert(t('contact.err.norEmail'))
+        if(!/^\S+@\S+\.\S+$/.test(state.input)) return alert(t('contact.err.notEmail'))
         else{
+            setState({
+                ...state,
+                text: ''
+            })
             axios.put(
                 `${url}/${state.input}/${state.text}`, {
                 sender: state.input,
                 text: state.text
             })
+            return alert(t('contact.sended'))
         }
     }
 
