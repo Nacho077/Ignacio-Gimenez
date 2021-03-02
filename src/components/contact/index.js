@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import axios from 'axios'
 import s from './contact.module.css'
 
 const Contact = () => {
@@ -17,6 +18,19 @@ const Contact = () => {
             ...state,
             [e.target.name]: e.target.value
         })
+    }
+
+    const handleSend = () => {
+        const url = "https://backportfolioignaciogimenez.herokuapp.com/email"
+        if(!state.input || !state.text) return alert(t('contact.err.incomplete'))
+        if(!/^\S+@\S+\.\S+$/.test(state.input)) return alert(t('contact.err.norEmail'))
+        else{
+            axios.put(
+                `${url}/${state.input}/${state.text}`, {
+                sender: state.input,
+                text: state.text
+            })
+        }
     }
 
     return (
@@ -62,7 +76,7 @@ const Contact = () => {
                         border: `1px solid ${state.text ? '#e78133' : '#555'}`
                     }}
                 />
-                <button className={s.btn}>Enviar</button>
+                <button className={s.btn} onClick={handleSend}>Enviar</button>
             </div>
             <div className={s.container_links}>
                 <a

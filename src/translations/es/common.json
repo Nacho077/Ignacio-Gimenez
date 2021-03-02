@@ -6,7 +6,8 @@
         "contact": "Contactame"
     },
     "presentation": {
-        "resume": "Estoy comenzando en el mundo de IT como Desarrollador Full Stack, y tengo muchas ganas de aprender"
+        "resume": "Estoy comenzando en el mundo de IT como Desarrollador Full Stack, y tengo muchas ganas de aprender",
+        "download": "Descargar CV"
     },
     "skills": {
         "title": "Habilidades"
@@ -25,6 +26,10 @@
     },
     "contact": {
         "title": "Contáctame",
-        "message": "Mensaje"
+        "message": "Mensaje",
+        "err": {
+            "incomplete": "Complete todos los campos",
+            "notEmail": "Asegurece de haber ingresado un mail valido"
+        }
     }
 }

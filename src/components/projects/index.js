@@ -56,7 +56,7 @@ const Projects = () => {
                 { logo: redux, name: "Redux" },
                 { logo: firebase, name: "Firebase" },
             ],
-            video: HenryWorldWebVideo
+            video: HenryWorldApp
         },
         {
             img: Wultur,

@@ -7,7 +7,8 @@
         "contact": "Contact me"
     },
     "presentation":{
-        "resume": "I am starting in the IT world as a Full Stack Developer, and I really want to learn"
+        "resume": "I am starting in the IT world as a Full Stack Developer, and I really want to learn",
+        "download": "Download CV"
     },
     "skills": {
         "title": "Skills"
@@ -26,6 +27,10 @@
     },
     "contact": {
         "title": "Contact me",
-        "message": "Message"
+        "message": "Message",
+        "err": {
+            "incomplete": "Complete all field",
+            "notEmail": "Make sure to enter a valid email address"
+        }
     }
 }
