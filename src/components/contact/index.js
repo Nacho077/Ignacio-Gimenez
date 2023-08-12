@@ -7,6 +7,7 @@ import s from './contact.module.css'
 
 const Contact = () => {
     const { REACT_APP_EMAIL_SERVICE, REACT_APP_EMAIL_TEMPLATE, REACT_APP_EMAIL_KEY } = process.env
+    console.log(REACT_APP_EMAIL_SERVICE, REACT_APP_EMAIL_TEMPLATE, REACT_APP_EMAIL_KEY)
     const [state, setState] = useState({
         input: '',
         text: '',
