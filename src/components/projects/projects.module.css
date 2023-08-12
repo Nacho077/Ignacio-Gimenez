@@ -1,15 +1,18 @@
 .container_main{
     margin-bottom: 50px;
 }
+
 .subtitle{
     color: white;
     text-align: center;
     margin-top: 40px;
     font-size: 28px;
 }
+
 .container_btn{
     text-align: center;
 }
+
 .btn{
     padding: 40px;
     padding-top: 15px;
@@ -21,6 +24,7 @@
     text-transform: uppercase;
     font-weight: bold;
 }
+
 .container_projects > div:nth-child(2n) > div{
     flex-direction: row-reverse;
 }

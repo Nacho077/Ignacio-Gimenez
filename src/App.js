@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
 import s from './app.module.css'
 
 
@@ -10,11 +9,24 @@ import Skills from './components/skills'
 import Projects from './components/projects'
 import Contact from './components/contact'
 
-//app
 const App = () => {
-  useEffect(() => {
-    axios.put('https://backportfolioignaciogimenez.herokuapp.com/visits')
-  }, [])
+  const sections = [{
+      name:"about",
+      component: <Presentation />
+    },
+    {
+      name:"skills",
+      component: <Skills />
+    },
+    {
+      name:"projects",
+      component: <Projects />
+    },
+    {
+      name:"contact",
+      component: <Contact />
+    }
+  ]
 
   return (
     <div className={s.container_app}>
@@ -23,17 +35,12 @@ const App = () => {
         <div className={`${s.line} ${s.line_nav}`}></div>
       </div>
       <div className={s.container_port}>
-        <div id="about" className={s.separator}></div>
-        <div><Presentation /></div>
-        <div id="skills" className={s.separator}></div>
-        <Skills />
-        <div className={s.line}></div>
-        <div id="projects" className={s.separator}></div>
-        <Projects />
-        <div className={s.line}></div>
-        <div id="contact" className={s.separator}></div>
-        <Contact />
-        <div className={s.separator}></div>
+        {sections.map(section => (
+          <section key={section.name}>
+            <div id={section.name} className={s.separator}></div>
+            {section.component}
+          </section>
+        ))}
         <div className={s.separator}></div>
       </div>
     </div>)

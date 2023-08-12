@@ -7,6 +7,7 @@
     row-gap: 20px;
     padding-bottom: 50px;
 }
+
 .container_logos div:nth-child(11){
     grid-column: 2 / 3;
 }
@@ -30,6 +31,7 @@
         margin: 100px 0;
         margin: 100px 20px;
     }
+    
     .container_logos div:nth-child(11){
         grid-column: 1 / 2;
     }

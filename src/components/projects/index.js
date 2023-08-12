@@ -4,26 +4,26 @@ import Card from './card/card'
 import s from './projects.module.css'
 
 //projects
-import HenryWorldWeb from '../../imgs/projects/Henry-World-Web.png'
-import HenryWorldApp from '../../imgs/projects/Henry-World-App.jpg'
-import Wultur from '../../imgs/projects/Wultur.png'
-import MercadoHenry from '../../imgs/projects/MercadoHenry.png'
-import PokePage from '../../imgs/projects/PokePage.png'
+import HenryWorldWeb from '../../assets/images/projects/Henry-World-Web.png'
+import HenryWorldApp from '../../assets/images/projects/Henry-World-App.jpg'
+import Wultur from '../../assets/images/projects/Wultur.png'
+import MercadoHenry from '../../assets/images/projects/MercadoHenry.png'
+import PokePage from '../../assets/images/projects/PokePage.png'
 
 //skills
-import css3 from '../../imgs/logos/css3.svg'
-import firebase from '../../imgs/logos/firebase.svg'
-import materialUi from '../../imgs/logos/material-ui.svg'
-import postgreSQL from '../../imgs/logos/postgresql.svg'
-import react from '../../imgs/logos/react.svg'
-import redux from '../../imgs/logos/redux.svg'
-import typeScript from '../../imgs/logos/typescript.svg'
+import css3 from '../../assets/images/logos/css3.svg'
+import firebase from '../../assets/images/logos/firebase.svg'
+import materialUi from '../../assets/images/logos/material-ui.svg'
+import postgreSQL from '../../assets/images/logos/postgresql.svg'
+import react from '../../assets/images/logos/react.svg'
+import redux from '../../assets/images/logos/redux.svg'
+import typeScript from '../../assets/images/logos/typescript.svg'
 
 //videos
-import HenryWorldWebVideo from '../../vids/HenryWorldWeb.mp4'
-import WulturVideo from '../../vids/Wultur.mp4'
-import MercadoHenryVideo from '../../vids/MercadoHenry.mp4'
-import PokePageVideo from '../../vids/Pokepage.mp4'
+import HenryWorldWebVideo from '../../assets/videos/HenryWorldWeb.mp4'
+import WulturVideo from '../../assets/videos/Wultur.mp4'
+import MercadoHenryVideo from '../../assets/videos/MercadoHenry.mp4'
+import PokePageVideo from '../../assets/videos/Pokepage.mp4'
 
 const Projects = () => {
     const { t } = useTranslation('common')

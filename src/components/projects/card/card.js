@@ -1,15 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import s from './card.module.css'
 
 const Card = ({ project: { img, size, title, config, links, skills, video }, i }) => {
     const { t } = useTranslation('common')
     const name = title.split("-").join(" ")
+    const [isHover, setHover] = useState(false)
+
+    const handleHoverIn = () => {
+        setHover(true)
+    }
+
+    const handleHoverOut = () => {
+        setTimeout(() => {
+            setHover(false)
+        }, 400)
+    }
 
     return (
         <div
             id={title}
             className={s.container_main}
+            onMouseEnter={handleHoverIn}
+            onMouseLeave={handleHoverOut}
         >
             <div
                 className={s.container_img}
@@ -30,8 +43,10 @@ const Card = ({ project: { img, size, title, config, links, skills, video }, i }
                     style={{
                         height: size.height,
                         width: size.width,
-                        transform: `translateX(${i % 2 !== 0 ? '-' : ''}120px)`
-                    }} />
+                        transform: `translateX(${i % 2 !== 0 ? '-' : ''}120px)}`,
+                        display: isHover ? 'none' : 'block'
+                    }}
+                />
                 <div className={s.container_logos} style={{ height: size.height }}>
                     {skills.map(skill => (
                         <div key={skill.name} className={s.container_skill}>
@@ -63,8 +78,7 @@ const Card = ({ project: { img, size, title, config, links, skills, video }, i }
                             target="_blank"
                             rel="noreferrer"
                         >
-                            {
-                                t("projects.site")}
+                            {t("projects.site")}
                         </a>}
                 </div>
             </div>

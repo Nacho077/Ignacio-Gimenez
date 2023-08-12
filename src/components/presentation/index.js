@@ -2,22 +2,24 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import s from './presentation.module.css'
 
-import image from '../../imgs/profile.jpeg'
+import image from '../../assets/images/profile.jpeg'
 
-import cvEN from '../../cvs/IgnacioGimenezEn.pdf'
+import cvEN from '../../assets/cvs/IgnacioGimenezEn.pdf'
 
 const Presentation = () => {
-    const { t } = useTranslation('common')
+    const { t, i18n } = useTranslation('common')
 
     return (
         <div className={s.container_main}>
             <div className={s.container}>
                 <div className={s.container_photo}>
-                    <img src={image} alt="Ignacio Gimenez" />
+                    <div className={s.photo}>
+                        <img src={image} alt="Ignacio Gimenez" />
+                    </div>
                 </div>
                 <a
-                    href={cvEN}
-                    download={cvEN}
+                    href={i18n.language === "es" ? cvEN : cvEN}
+                    download={i18n.language === "es" ? cvEN : cvEN}
                     className={s.btn}
                 >
                     {t('presentation.download')}

@@ -1,17 +1,35 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import * as emailjs from 'emailjs-com'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import axios from 'axios'
 import s from './contact.module.css'
 
 const Contact = () => {
+    const { REACT_APP_EMAIL_SERVICE, REACT_APP_EMAIL_TEMPLATE, REACT_APP_EMAIL_KEY } = process.env
     const [state, setState] = useState({
         input: '',
         text: '',
         inputFocus: false
     })
     const { t } = useTranslation('common')
+    const networks = [
+        {
+            name: "Github",
+            link: "https://github.com/Nacho077",
+            icon: <GitHubIcon fontSize="large" />
+        },
+        {
+            name: "Linkedin",
+            link: "https://www.linkedin.com/in/ignacio-gimenez-305799184/",
+            icon: <LinkedInIcon fontSize="large" />
+        },
+        {
+            name: "ignaciogimenez70@gmail.com",
+            link: "mailto:ignaciogimenez70@gmail.com",
+            icon: ""
+        }
+    ]
 
     const handleChanges = e => {
         setState({
@@ -20,22 +38,39 @@ const Contact = () => {
         })
     }
 
+    const sendEmail = () => {
+        let template = {
+            from: state.input,
+            message_html: state.text
+        }
+
+        return emailjs.send(
+            REACT_APP_EMAIL_SERVICE,
+            REACT_APP_EMAIL_TEMPLATE,
+            template,
+            REACT_APP_EMAIL_KEY
+        )
+    }
+
     const handleSend = () => {
-        const url = "https://backportfolioignaciogimenez.herokuapp.com/email"
         if(!state.input || !state.text) return alert(t('contact.err.incomplete'))
         if(!/^\S+@\S+\.\S+$/.test(state.input)) return alert(t('contact.err.notEmail'))
-        else{
+
+        sendEmail()
+        .then(() => {
             setState({
                 ...state,
                 text: ''
             })
-            axios.put(
-                `${url}/${state.input}/${state.text}`, {
-                sender: state.input,
-                text: state.text
-            })
-            return alert(t('contact.sended'))
-        }
+
+            alert(t('contact.sended'))
+        })
+        .catch(() => {
+            alert('ERROR')
+        })
+
+        
+
     }
 
     return (
@@ -84,36 +119,18 @@ const Contact = () => {
                 <button className={s.btn} onClick={handleSend}>Enviar</button>
             </div>
             <div className={s.container_links}>
-                <a
-                    className={s.link}
-                    href="https://github.com/Nacho077"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <GitHubIcon
-                        fontSize="large"
-                    />
-                    <span className={s.text}>Github</span>
-                </a>
-                <a
-                    className={s.link}
-                    href="https://www.linkedin.com/in/ignacio-gimenez-305799184/"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <LinkedInIcon
-                        fontSize="large"
-                    />
-                    <span className={s.text}>Linkedin</span>
-                </a>
-                <a
-                    className={s.link}
-                    href="mailto:ignaciogimenez70@gmail.com"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <span className={s.text}>ignaciogimenez70@gmail.com</span>
-                </a>
+                {networks.map(network => (
+                    <a 
+                        key={network.name}
+                        className={s.link}
+                        href={network.link}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        {network.icon}
+                        <span className={s.text}>{network.name}</span>
+                    </a>
+                ))}
             </div>
         </div>
     )

@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 .container_form{
     margin-top: 100px;
     width: 80%;
@@ -11,10 +12,12 @@
     display: flex;
     flex-direction: column;
 }
+
 .container_input{
     position: relative;
     margin-bottom: 25px;
 }
+
 .label{
     position: absolute;
     top: 0;
@@ -22,7 +25,9 @@
     font-size: 16px;
     pointer-events: none;
     color: white;
+    transition: all ease .5s;
 }
+
 .input{
     padding: 8px 0 5px 0;
     background: transparent;
@@ -32,16 +37,19 @@
     color: white;
     font-size: 16px;
 }
+
 .input:focus{
     border: none;
     outline: none;
     border-bottom: 1px solid #e78133;
 }
+
 .container_input .input:focus ~ .label,
 .container_input .input:valid ~ .label{
     top: -12px;
     font-size: 12px;
 }
+
 .textarea{
     padding: 10px;
     resize: none;
@@ -52,9 +60,11 @@
     height: 200px;
 
 }
+
 .textarea:focus{
     border: 1px solid #e78133;
 }
+
 .btn{
     width: 150px;
     height: 50px;
@@ -62,29 +72,35 @@
     padding: 8px;
     margin: 20px auto;
     cursor: pointer;
+    transition: all ease .5s;
 }
+
 .btn:hover{
     width: 150px;
     height: 50px;
     background: white;
     box-shadow: 5px 5px red;
 }
+
 .container_links{
     width: 100%;
     display: flex;
     justify-content: space-around;
     margin-top: 100px;
 }
+
 .link{
     color: white;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
 }
+
 .text{
     font-size: 26px;
     margin-left: 50px;
 }
+
 .container_links .link:nth-child(3) .text{
     font-size: 20px;
     margin-left: 0;
@@ -95,6 +111,7 @@
         flex-direction: column;
         align-items: center;
     }
+
     .text{
         font-size: 22px;
         margin-left: 10px;

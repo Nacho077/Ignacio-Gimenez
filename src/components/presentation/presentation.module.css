@@ -1,16 +1,19 @@
-.container_main{
+.container_main {
     padding-top: 50px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
-.container{
+
+.container {
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
-.btn{
+
+.btn {
     color: black;
     padding: 20px;
     text-decoration: none;
@@ -18,23 +21,34 @@
     cursor: pointer;
     box-shadow: 5px 5px red;
 }
-.container_photo{
+
+.container_photo {
+    width: 300px;
+    height: 300px;
+}
+
+.photo {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
+    transition: all ease .5s;
 }
-.container_photo > img{
+
+.photo > img {
     width: 100%;
 }
-.container_photo:hover{
+
+.container:hover .photo {
     transform: scaleX(-1);
 }
-.container_resume{
+
+.container_resume {
     display: flex;
     flex-direction: column;
 }
-.container_name{
+
+.container_name {
     display: flex;
     flex-direction: column;
     line-height: 0;
@@ -44,7 +58,8 @@
     color: transparent;
     text-transform: uppercase;
 }
-.resume{
+
+.resume {
     margin: auto;
     margin-top: 40px;
     width: 500px;
@@ -53,36 +68,47 @@
     font-weight: bold;
 }
 
-@media (max-width: 900px){
-    .container_photo{
+
+@media (max-width: 900px) {
+    .container_main {
+        padding-top: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container_photo {
         display: none;
     }
-    .container{
+
+    .container {
         justify-content: center;
     }
 }
 
-@media (max-width: 760px){
-    .container_main{
+@media (max-width: 760px) {
+    .container_main {
         flex-direction: column-reverse;
         justify-content: space-evenly;
         height: 90vh;
     }
-    .container_name > h1{
+
+    .container_name > h1 {
         line-height: 120px;
         margin: auto;
     }
-    .resume{
+
+    .resume {
         text-align: center;
         width: 95%;
     }
-    .container_photo{
+
+    .container_photo {
         display: none;
     }
 }
 
-@media (max-width: 550px){
-    .container_name{
+@media (max-width: 550px) {
+    .container_name {
         font-size: 36px;
     }
 }
