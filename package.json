@@ -17,7 +17,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "set REACT_APP_EMAIL_SERVICE=service_x0d0k5n&& set REACT_APP_EMAIL_TEMPLATE=template_0o2b10s&& set REACT_APP_EMAIL_KEY=QoT1pdHt0Cz6R3bxd&& react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
