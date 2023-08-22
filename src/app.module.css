@@ -4,7 +4,7 @@
 
 .container_navBar {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     background: #101010;
     z-index: 10;
@@ -24,4 +24,10 @@
 
 .separator {
     height: 50px;
+}
+
+.container_modal {
+    position: fixed;
+    top: 0;
+    z-index: 20;
 }

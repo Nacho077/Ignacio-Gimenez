@@ -1,20 +1,64 @@
-{
+{   "languages":{
+        "es": "Spanish",
+        "en": "English"
+    },
     "nav": {
-        "title": "Hello World",
         "about": "About Me",
         "skills": "Skills",
+        "experience": "Experiencia",
         "projects": "Projects",
         "contact": "Contact me"
     },
     "presentation":{
         "resume": "I am starting in the IT world as a Full Stack Developer, and I really want to learn",
-        "download": "Download CV"
+        "download": "Download CV",
+        "languageSelection": {
+            "text": "In what language do you want to download the curriculum?"
+        }
     },
     "skills": {
         "title": "Skills"
     },
+    "experience": {
+        "title": "Laboral Experience",
+        "positions": {
+            "software-developer": "Software Developer",
+            "software-engineer": "Software Engineer",
+            "developer": "Developer",
+            "cra": "Code Review Advisor"
+        },
+        "time": {
+            "february": "February",
+            "april": "April",
+            "may": "May",
+            "june": "June",
+            "current": "Currently"
+        },
+        "responsibilities": {
+            "mercado-libre": {
+                "ssr": [
+                    "Analyze the infrastructure of the projects focusing on scalability and performance",
+                    "Implementation and monitoring of alarms and metrics in Datadog for process monitoring and application scalability"
+                ],
+                "jr": [
+                    "Maintain and optimize existing applications",
+                    "Creation of new applications applying good practices and design patterns using Java and Go"
+                ]
+            },
+            "henry": {
+                "mentor": [
+                    "Organization of daily and retrospective meetings to evaluate the progress of the team within the SCRUM framework",
+                    "Evaluate and highlight strengths and improvement points of team members"
+                ],
+                "cra": [
+                    "Attend the resolution of exercises and promote group collaboration",
+                    "Preparation and presentation of technical exercises"
+                ]
+            }
+        }
+    },
     "projects": {
-        "title": "My proyects",
+        "title": "My projects",
         "subtitle": "These are some of the projects I have worked on",
         "Henry-World-Web": "Henry World web version in which administrators and teachers can make changes more conveniently and quickly",
         "Henry-World-App": "Mobile version of Henry World that works as a virtual campus, in which students can enter to see their classes, their groups, teachers and more",
@@ -30,8 +74,13 @@
         "message": "Message",
         "err": {
             "incomplete": "Complete all field",
-            "notEmail": "Make sure to enter a valid email address"
+            "notEmail": "Make sure to enter a valid email address",
+            "cantSendEmail": "Email cannot be sent now, please try again in few moments"
         },
         "sended": "Thank you for contacting me, I will be answering you shortly"
+    },
+    "button": {
+        "close": "Close",
+        "accept": "Accept"
     }
 }

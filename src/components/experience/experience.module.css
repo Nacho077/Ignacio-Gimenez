@@ -1,0 +1,282 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    min-width: 250px;
+    width: 100%;
+}
+
+.container_logos {
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.card:hover {
+    background-color: white;
+    box-shadow: 10px 10px red;
+    color: black;
+}
+
+.card:hover > .logo {
+    filter: none;
+}
+
+.card:hover > h2 {
+    color: black;
+}
+
+.logo {
+    width: 90%;
+    height: 115px;
+}
+
+.card > h2 {
+    text-transform: capitalize;
+    color: white;
+}
+
+.mercado_libre > .logo {
+    filter: grayscale(100%);
+}
+
+.henry > .logo {
+    filter: grayscale(100%);
+}
+
+#active_card {
+    background-color: white;
+    box-shadow: 10px 10px red;
+}
+
+#active_card > .logo {
+    filter: none;
+}
+
+#active_card > h2 {
+    color: black;
+}
+
+.container_info {
+    margin-top: 50px;
+    width: 70%;
+    border-left: white 3px solid;
+    padding: 0 5%;
+    color: white;
+    overflow: hidden;
+    height: 450px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 15px auto;
+}
+
+.container_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container_name {
+    font-style: italic;
+}
+
+.dot {
+    background-color: red;
+    width: .8em;
+    height: .8em;
+    border-radius: 50%;
+    align-self: center;
+    margin-left: 1px;
+}
+
+.line {
+    background-color: red;
+    width: 5px;
+    margin-left: 5px;
+    height: 90%;
+    align-self: center;
+    border-radius: 3px;
+}
+
+.positionName,
+.list {
+    grid-column: 2 / 3;
+}
+
+.positionName {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.list {
+    padding-left: 40px;
+}
+
+.container_company {
+    transition: all ease 1s;
+}
+
+.container_company > h2 {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#mercado_libre > .container_experience > .info:nth-child(2) > .line {
+    background-color: transparent;
+}
+
+
+#henry > .container_experience {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#henry > .container_experience > .info {
+    width: 48%;
+    min-width: 450px;
+}
+
+#henry > .container_experience > .info > .line {
+    background-color: transparent;
+}
+
+.active {
+    animation: appear 1s forwards;
+}
+
+.inactive {
+    animation: desapear 1s forwards;
+}
+
+.container_technologies {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.container_technologies {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.container_technologies > img {
+    width: 50px;
+    /* filter: drop-shadow(-1px -1px 1px white) drop-shadow(1px 1px 1px white); */
+    filter: drop-shadow(0 0 3px white);
+}
+
+@keyframes desapear {
+    0% {
+        transform: none;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    100% {
+        transform: scaleY(0);
+        height: 0;
+    }
+}
+
+@keyframes appear {
+    0% {
+        height: 0;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    90% {
+        transform: scaleY(1);
+    }
+}
+
+@media (max-width: 1600px) {
+    #henry > .container_experience > .info {
+        width: 100%;
+        min-width: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .container_logos {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .container_info {
+        margin-top: 0;
+        border: none;
+        width: 90vw;
+        height: 630px;
+    }
+
+    .card {
+        width: 100px;
+        height: 150px;
+    }
+
+    .mercado_libre > h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .logo {
+        padding-top: 25px;
+        width: 100%;
+        height: 70px;
+        width: 90px;
+    }
+
+    #mercado_libre > .container_experience > .info:nth-child(2n),
+    #henry > .container_experience > .info:nth-child(2) {
+        margin-top: 20px;
+    }
+
+    #henry > .container_experience {
+        width: 90%;
+    }
+
+    #henry > .container_experience > .info {
+        min-width: 0;
+    }
+
+    .container_name {
+        flex-direction: column;
+    }
+
+    .container_name > span {
+        padding-left: 20px;
+    }
+}

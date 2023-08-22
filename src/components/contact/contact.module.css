@@ -73,6 +73,7 @@
     margin: 20px auto;
     cursor: pointer;
     transition: all ease .5s;
+    border: none;
 }
 
 .btn:hover{
@@ -86,12 +87,17 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top: 100px;
+}
+
+.link > img {
+    width: 50px;
+    height: 50px;
 }
 
 .link{
     color: white;
     text-decoration: none;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -99,11 +105,6 @@
 .text{
     font-size: 26px;
     margin-left: 50px;
-}
-
-.container_links .link:nth-child(3) .text{
-    font-size: 20px;
-    margin-left: 0;
 }
 
 @media (max-width: 850px){

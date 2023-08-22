@@ -5,7 +5,6 @@ import s from './projects.module.css'
 
 //projects
 import HenryWorldWeb from '../../assets/images/projects/Henry-World-Web.png'
-import HenryWorldApp from '../../assets/images/projects/Henry-World-App.jpg'
 import Wultur from '../../assets/images/projects/Wultur.png'
 import MercadoHenry from '../../assets/images/projects/MercadoHenry.png'
 import PokePage from '../../assets/images/projects/PokePage.png'
@@ -13,7 +12,6 @@ import PokePage from '../../assets/images/projects/PokePage.png'
 //skills
 import css3 from '../../assets/images/logos/css3.svg'
 import firebase from '../../assets/images/logos/firebase.svg'
-import materialUi from '../../assets/images/logos/material-ui.svg'
 import postgreSQL from '../../assets/images/logos/postgresql.svg'
 import react from '../../assets/images/logos/react.svg'
 import redux from '../../assets/images/logos/redux.svg'
@@ -31,7 +29,6 @@ const Projects = () => {
     const projects = [
         {
             img: HenryWorldWeb,
-            size: { width: "300px", height: "250px" },
             title: "Henry-World-Web",
             links: {
                 site: "https://henry-app.vercel.app/"
@@ -43,42 +40,32 @@ const Projects = () => {
             ],
             video: HenryWorldWebVideo
         },
-        {
-            img: HenryWorldApp,
-            size: { width: "200px", height: "400px" },
-            title: "Henry-World-App",
-            config: { marginTop: "50px" },
-            links: {
-                site: "https://expo.io/accounts/eameo/builds/9c4b55aa-d259-4ab9-bf07-70e094df3830"
-            },
-            skills: [
-                { logo: react, name: "React Native" },
-                { logo: redux, name: "Redux" },
-                { logo: firebase, name: "Firebase" },
-            ],
-            video: HenryWorldApp
-        },
+        // {
+        //     img: HenryWorldApp,
+        //     size: { width: "200px", height: "400px" },
+        //     title: "Henry-World-App",
+        //     config: { marginTop: "50px" },
+        //     skills: [
+        //         { logo: react, name: "React Native" },
+        //         { logo: redux, name: "Redux" },
+        //         { logo: firebase, name: "Firebase" },
+        //     ],
+        //     video: HenryWorldApp
+        // },
         {
             img: Wultur,
-            size: { width: "300px", height: "250px" },
             title: "Wultur",
-            links: {
-                site: "https://wultur.herokuapp.com/"
-            },
             skills: [
                 { logo: react, name: "React" },
-                { logo: materialUi, name: "Material-Ui" },
                 { logo: postgreSQL, name: "PostgreSQL" },
             ],
             video: WulturVideo
         },
         {
             img: MercadoHenry,
-            size: { width: "300px", height: "250px" },
             title: "Mercado-Henry",
             links: {
-                repo: "https://github.com/Nacho077/MercadoHenry",
-                site: "https://mercadohenry.herokuapp.com/"
+                repo: "https://github.com/Nacho077/MercadoHenry"
             },
             skills: [
                 { logo: react, name: "React" },
@@ -89,11 +76,10 @@ const Projects = () => {
         },
         {
             img: PokePage,
-            size: { width: "300px", height: "250px" },
             title: "Poke-Page",
             links: {
-                repo: "https://nacho077.github.io/PokePage",
-                site: "https://github.com/Nacho077/PokePage"
+                site: "https://nacho077.github.io/PokePage",
+                repo: "https://github.com/Nacho077/PokePage"
             },
             skills: [
                 { logo: typeScript, name: "TypeScript" },
@@ -110,9 +96,7 @@ const Projects = () => {
             <h3 className={s.subtitle}>{t("projects.subtitle")}</h3>
             <div className={s.container_projects}>
                 {projects.map((p, i) => (
-                    <div key={i}>
-                        <Card project={p} i={i} />
-                    </div>
+                    <Card project={p} index={i} key={i}/>
                 ))}
             </div>
         </div>

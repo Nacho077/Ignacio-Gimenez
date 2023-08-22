@@ -11,37 +11,24 @@
     height: 100px;
     margin-left: 25px;
     margin-top: 30px;
+    filter: grayscale(100%) saturate(200%) brightness(2);
 }
 
 .express {
     filter: invert();
 }
 
-.nodeJS,
-.redux,
-.javaScript {
-    filter: brightness(10);
-}
-
-.react,
-.typeScript,
-.java {
-    filter: invert() brightness(10);
-}
-
-.material {
-    filter: grayscale(100%) brightness(10);
-}
-
 .css3,
 .html5,
 .firebase,
-.postgreSQL {
+.postgreSQL,
+.docker {
     filter: grayscale(100%) saturate(200%);
 }
 
-.sequelize {
-    filter: grayscale(100%) saturate(200%) brightness(2);
+.typeScript,
+.github {
+    filter: invert() brightness(10);
 }
 
 .subtitle {

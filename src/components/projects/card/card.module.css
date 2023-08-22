@@ -1,20 +1,40 @@
 .container_main{
+    min-height: 350px;
     padding: 25px;
     width: 90%;
     margin: auto;
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     overflow: hidden;
     transition: all ease .5s;
+    margin-bottom: 30px;;
 }
 
 .container_img{
-    width: 40%;
+    width: 44%;
+    height: 60%;
     display: flex;
     justify-content: center;
     position: relative;
     overflow: hidden;
+}
+
+.img {
+    transition: all ease .5s;
+    width: 500px;
+    height: 250px;
+}
+
+.container_main:hover .img {
+    height: 0px;
+    width: 0px;
+}
+
+.container_main:hover #Henry-World-App {
+    height: 0px;
+    width: 0px;
 }
 
 .container_description{
@@ -23,13 +43,20 @@
     flex-direction: column;
 }
 
+.container_info {
+    display: flex;
+    flex-direction: column;
+}
+
 .title{
+    align-self: center;
     color: orange;
     text-shadow: 0 0 20px orange;
 }
 
 .description{
     font-size: 22px;
+    text-align: center;
 }
 
 .container_buttons{
@@ -58,6 +85,7 @@
     opacity: 0;
     transform: translateY(100%);
     transition: all ease .5s;
+    height: 250px;
 }
 
 .container_main:hover .container_logos{
@@ -86,12 +114,21 @@
     opacity: 0;
     transform: translateX(500%);
     transition: all ease .5s;
+    margin-top: 0;
+    width: 450px;
+    height: 250px;
 }
 
 .container_main:hover .frame{
     opacity: 1;
     transform: translateX(0);
 
+}
+
+#Henry-World-App {
+    width: 200px;
+    height: 400px;
+    margin-top: 50px;
 }
 
 @media (max-width: 1100px){
@@ -105,6 +142,14 @@
         padding: 0;
     }
 
+    .container_img {
+        width: 600px;
+    }
+
+    .container_img > img {
+        width: 600px
+    }
+
     .container_description{
         width: 90%;
     }
@@ -113,8 +158,8 @@
         text-align: center;
     }
 
-    .container_img{
-        width: 100%;
+    .container_buttons {
+        padding-bottom: 30px;
     }
 }
 
@@ -125,6 +170,7 @@
     }
 
     .container_img{
+        padding-top: 30px;
         width: 90%;
         overflow: hidden;
     }

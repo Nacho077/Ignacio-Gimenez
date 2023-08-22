@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as emailjs from 'emailjs-com'
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import gitHubIcon from '../../assets/images/icons/github.svg'
+import linkedInIcon from '../../assets/images/icons/linkedin.svg'
+import emailIcon from '../../assets/images/icons/email.svg'
 import s from './contact.module.css'
 
-const Contact = () => {
+const Contact = ({openModal}) => {
     const { REACT_APP_EMAIL_SERVICE, REACT_APP_EMAIL_TEMPLATE, REACT_APP_EMAIL_KEY } = process.env
-    console.log(REACT_APP_EMAIL_SERVICE, REACT_APP_EMAIL_TEMPLATE, REACT_APP_EMAIL_KEY)
     const [state, setState] = useState({
         input: '',
         text: '',
@@ -18,17 +18,17 @@ const Contact = () => {
         {
             name: "Github",
             link: "https://github.com/Nacho077",
-            icon: <GitHubIcon fontSize="large" />
+            icon: gitHubIcon
         },
         {
             name: "Linkedin",
             link: "https://www.linkedin.com/in/ignacio-gimenez-305799184/",
-            icon: <LinkedInIcon fontSize="large" />
+            icon: linkedInIcon
         },
         {
             name: "ignaciogimenez70@gmail.com",
             link: "mailto:ignaciogimenez70@gmail.com",
-            icon: ""
+            icon: emailIcon
         }
     ]
 
@@ -54,8 +54,27 @@ const Contact = () => {
     }
 
     const handleSend = () => {
-        if(!state.input || !state.text) return alert(t('contact.err.incomplete'))
-        if(!/^\S+@\S+\.\S+$/.test(state.input)) return alert(t('contact.err.notEmail'))
+        if(!state.input || !state.text) {
+            return openModal({
+                text: t('contact.err.incomplete'),
+                buttons: [
+                    {
+                        text: t('button.close')
+                    }
+                ]
+            })
+        } 
+        
+        if(!/^\S+@\S+\.\S+$/.test(state.input)) {
+            return openModal({
+                text: t('contact.err.notEmail'),
+                buttons: [
+                    {
+                        text: t('button.close')
+                    }
+                ]
+            })
+        }
 
         sendEmail()
         .then(() => {
@@ -64,14 +83,25 @@ const Contact = () => {
                 text: ''
             })
 
-            alert(t('contact.sended'))
+            openModal({
+                text: t('contact.sended'),
+                buttons: [
+                    {
+                        text: t('button.accept')
+                    }
+                ]
+            })
         })
         .catch(() => {
-            alert('ERROR')
+            openModal({
+                text: t('contact.err.cantSendEmail'),
+                buttons: [
+                    {
+                        text: t('button.accept')
+                    }
+                ]
+            })
         })
-
-        
-
     }
 
     return (
@@ -128,7 +158,7 @@ const Contact = () => {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        {network.icon}
+                        <img src={network.icon} alt={network.name} />
                         <span className={s.text}>{network.name}</span>
                     </a>
                 ))}

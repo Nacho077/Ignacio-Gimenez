@@ -20,6 +20,8 @@
     background: white;
     cursor: pointer;
     box-shadow: 5px 5px red;
+    margin-top:30px;
+    border: none;
 }
 
 .container_photo {

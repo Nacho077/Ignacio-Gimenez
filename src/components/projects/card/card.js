@@ -1,53 +1,35 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import s from './card.module.css'
 
-const Card = ({ project: { img, size, title, config, links, skills, video }, i }) => {
+const Card = ({ project: { img, title, links, skills, video }, index }) => {
     const { t } = useTranslation('common')
     const name = title.split("-").join(" ")
-    const [isHover, setHover] = useState(false)
-
-    const handleHoverIn = () => {
-        setHover(true)
-    }
-
-    const handleHoverOut = () => {
-        setTimeout(() => {
-            setHover(false)
-        }, 400)
-    }
 
     return (
         <div
             id={title}
             className={s.container_main}
-            onMouseEnter={handleHoverIn}
-            onMouseLeave={handleHoverOut}
         >
             <div
                 className={s.container_img}
-                style={{ flexDirection: i % 2 === 0 ? 'row-reverse' : 'row' }}
+                style={{ flexDirection: index % 2 === 0 ? 'row-reverse' : 'row' }}
             >
                 <video
                     className={s.frame}
+                    id={s[title]}
                     title={title}
-                    width={size.width}
-                    height={size.height}
                     controls
                 >
                     <source src={video} type="video/mp4"/>
                 </video>
                 <img
                     src={img}
+                    id={s[title]}
                     alt={title}
-                    style={{
-                        height: size.height,
-                        width: size.width,
-                        transform: `translateX(${i % 2 !== 0 ? '-' : ''}120px)}`,
-                        display: isHover ? 'none' : 'block'
-                    }}
+                    className={s.img}
                 />
-                <div className={s.container_logos} style={{ height: size.height }}>
+                <div className={s.container_logos} id={s[title]}>
                     {skills.map(skill => (
                         <div key={skill.name} className={s.container_skill}>
                             <img src={skill.logo} alt={skill.name} />
@@ -56,13 +38,13 @@ const Card = ({ project: { img, size, title, config, links, skills, video }, i }
                     ))}
                 </div>
             </div>
-            <div className={s.container_description} style={config}>
-                <div>
+            <div className={s.container_description}>
+                <div className={s.container_info}>
                     <h1 className={s.title}>{name}</h1>
                     <p className={s.description}>{t(`projects.${title}`)}</p>
                 </div>
                 <div className={s.container_buttons}>
-                    {links.repo &&
+                    {links?.repo &&
                         <a
                             href={links.repo}
                             className={s.btn}
@@ -71,7 +53,7 @@ const Card = ({ project: { img, size, title, config, links, skills, video }, i }
                         >
                             {t("projects.repo")}
                         </a>}
-                    {links.site &&
+                    {links?.site &&
                         <a
                             href={links.site}
                             className={s.btn}

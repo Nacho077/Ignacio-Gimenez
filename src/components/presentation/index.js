@@ -4,10 +4,40 @@ import s from './presentation.module.css'
 
 import image from '../../assets/images/profile.jpeg'
 
-import cvEN from '../../assets/cvs/IgnacioGimenezEn.pdf'
+const Presentation = ({openModal}) => {
+    const { t } = useTranslation('common')
 
-const Presentation = () => {
-    const { t, i18n } = useTranslation('common')
+    const handleDownload = (fileUrl) => {
+        fetch(fileUrl)
+        .then(res => res.blob(fileUrl))
+        .then(blob => {
+            const fileURL = window.URL.createObjectURL(blob);
+            let alink = document.createElement('a');
+            alink.href = fileURL;
+            alink.download = 'IgnacioGimenez.pdf';
+            alink.click();
+        })
+    }
+
+    const handleModal = () => {
+        openModal({
+            text: t('presentation.languageSelection.text'),
+            buttons: [
+                {
+                    text: t('languages.es'),
+                    onClick: () => {
+                        handleDownload('../../assets/cvs/IgnacioGimenezEs.pdf')
+                    }
+                },
+                {
+                    text: t('languages.en'),
+                    onClick: () => {
+                        handleDownload('../../assets/cvs/IgnacioGimenezEn.pdf')
+                    }
+                }
+            ]
+        })
+    }
 
     return (
         <div className={s.container_main}>
@@ -17,13 +47,12 @@ const Presentation = () => {
                         <img src={image} alt="Ignacio Gimenez" />
                     </div>
                 </div>
-                <a
-                    href={i18n.language === "es" ? cvEN : cvEN}
-                    download={i18n.language === "es" ? cvEN : cvEN}
+                <button
+                    onClick={handleModal}
                     className={s.btn}
                 >
                     {t('presentation.download')}
-                </a>
+                </button>
             </div>
             <div className={s.container_resume}>
                 <div className={s.container_name}>

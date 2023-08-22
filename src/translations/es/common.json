@@ -1,16 +1,62 @@
 {
+    "languages":{
+        "es": "Español",
+        "en": "Ingles"
+    },
     "nav": {
         "about": "Sobre mi",
         "skills": "Habilidades",
+        "experience": "Experiencia",
         "projects": "Proyectos",
         "contact": "Contactame"
     },
     "presentation": {
         "resume": "Estoy comenzando en el mundo de IT como Desarrollador Full Stack, y tengo muchas ganas de aprender",
-        "download": "Descargar CV"
+        "download": "Descargar CV",
+        "languageSelection": {
+            "text": "En que idioma quieres descargar el curriculum?"
+        }
     },
     "skills": {
         "title": "Habilidades"
+    },
+    "experience": {
+        "title": "Experiencia Laboral",
+        "positions": {
+            "software-developer": "Desarrollador de Software",
+            "software-engineer": "Ingeniero de Software",
+            "developer": "Desarrollador",
+            "cra": "Asesor de revisión de código"
+        },
+        "time": {
+            "february": "Febrero",
+            "april": "Abril",
+            "may": "Mayo",
+            "june": "Junio",
+            "current": "Actualidad"
+        },
+        "responsibilities": {
+            "mercado-libre": {
+                "ssr": [
+                    "Analizar la infraestuctura de los proyectos haciendo foco en escalabilidad y rendimiento",
+                    "Implementación y monitoreo de alarmas y métricas en Datadog para el seguimiento de procesos y escalabilidad de las aplicaciones"
+                ],
+                "jr": [
+                    "Mantener y optimizar aplicaciones existentes",
+                    "Creación de nuevas aplicaciones aplicando buenas practicas y patrones de diseño utilizando Java y Go"
+                ]
+            },
+            "henry": {
+                "mentor": [
+                    "Organización de reuniones diarias y retrospectivas para evaluar el progreso del equipo dentro del marco de trabajo SCRUM",
+                    "Evaluar y destacar puntos fuertes y de mejora de los miembros del equipo"
+                ],
+                "cra": [
+                    "Asistir a la resolución de ejercicios y promover la colaboración grupal",
+                    "Preparación y exposición de ejercicios técnicos"
+                ]
+            }
+        }
     },
     "projects": {
         "title": "Mis projectos",
@@ -29,8 +75,13 @@
         "message": "Mensaje",
         "err": {
             "incomplete": "Complete todos los campos",
-            "notEmail": "Asegurece de haber ingresado un mail valido"
+            "notEmail": "Asegurece de haber ingresado un mail valido",
+            "cantSendEmail": "No se pudo enviar el mail, intente nuevamente en unos momentos"
         },
         "sended": "Gracias por contactarme, en breve te estare respondiendo"
+    },
+    "button": {
+        "close": "Cerrar",
+        "accept": "Aceptar"
     }
 }
