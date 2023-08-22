@@ -147,7 +147,7 @@ const Contact = ({openModal}) => {
                         border: `1px solid ${state.text ? '#e78133' : '#555'}`
                     }}
                 />
-                <button className={s.btn} onClick={handleSend}>Enviar</button>
+                <button className={s.btn} onClick={handleSend}>{t('contact.send')}</button>
             </div>
             <div className={s.container_links}>
                 {networks.map(network => (

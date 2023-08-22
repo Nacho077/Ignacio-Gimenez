@@ -18,7 +18,11 @@
         }
     },
     "skills": {
-        "title": "Habilidades"
+        "title": "Habilidades",
+        "sections": {
+            "dataBase": "Bases de datos",
+            "tools": "Herramientas"
+        }
     },
     "experience": {
         "title": "Experiencia Laboral",
@@ -78,7 +82,8 @@
             "notEmail": "Asegurece de haber ingresado un mail valido",
             "cantSendEmail": "No se pudo enviar el mail, intente nuevamente en unos momentos"
         },
-        "sended": "Gracias por contactarme, en breve te estare respondiendo"
+        "sended": "Gracias por contactarme, en breve te estare respondiendo",
+        "send": "Enviar"
     },
     "button": {
         "close": "Cerrar",

@@ -56,7 +56,7 @@ const Skills = () => {
             ]
         },
         {
-            section: "Data Base", 
+            section: t('skills.sections.dataBase'), 
             technologies: [
                 {name: "sql", img: sql},
                 {name: "noSQL", img: nosql},
@@ -78,7 +78,7 @@ const Skills = () => {
             ]
         },
         {
-            section: "Tools?", 
+            section: t('skills.sections.tools'), 
             technologies: [
                 {name: "datadog", img: datadog},
                 {name: "git", img: git},

@@ -5,7 +5,7 @@
     "nav": {
         "about": "About Me",
         "skills": "Skills",
-        "experience": "Experiencia",
+        "experience": "Experience",
         "projects": "Projects",
         "contact": "Contact me"
     },
@@ -17,7 +17,11 @@
         }
     },
     "skills": {
-        "title": "Skills"
+        "title": "Skills",
+        "sections": {
+            "dataBase": "Data Base",
+            "tools": "Tools"
+        }
     },
     "experience": {
         "title": "Laboral Experience",
@@ -77,7 +81,8 @@
             "notEmail": "Make sure to enter a valid email address",
             "cantSendEmail": "Email cannot be sent now, please try again in few moments"
         },
-        "sended": "Thank you for contacting me, I will be answering you shortly"
+        "sended": "Thank you for contacting me, I will be answering you shortly",
+        "send": "Send"
     },
     "button": {
         "close": "Close",
