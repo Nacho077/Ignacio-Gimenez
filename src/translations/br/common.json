@@ -1,0 +1,93 @@
+{
+    "languages":{
+        "es": "Espanhol",
+        "en": "Inglês",
+        "br": "Português"
+    },
+    "nav": {
+        "about": "Sobre mim",
+        "skills": "Habilidades",
+        "experience": "Experiência",
+        "projects": "Projetos",
+        "contact": "Contate-me"
+    },
+    "presentation": {
+        "resume": "Estoy comenzando en el mundo de IT como Desarrollador Full Stack, y tengo muchas ganas de aprender",
+        "download": "Baixar currículo",
+        "languageSelection": {
+            "text": "Em que idioma você deseja baixar o currículo?"
+        }
+    },
+    "skills": {
+        "title": "Habilidades",
+        "sections": {
+            "dataBase": "Bases de dados",
+            "tools": "Ferramentas"
+        }
+    },
+    "experience": {
+        "title": "Experiência de trabalho",
+        "positions": {
+            "software-developer": "Desenvolvedor de software",
+            "software-engineer": "Engenheiro de software",
+            "developer": "Desenvolvedor",
+            "cra": "Consultor de revisão de código"
+        },
+        "time": {
+            "february": "Fevereiro",
+            "april": "Abril",
+            "may": "Maio",
+            "june": "Junho",
+            "current": "Presente"
+        },
+        "responsibilities": {
+            "mercado-libre": {
+                "ssr": [
+                    "Analisar a infraestrutura dos projetos com foco em escalabilidade e performance",
+                    "Implementação e monitoramento de alarmes e métricas em Datadog para monitoramento de processos e escalabilidade de aplicações"
+                ],
+                "jr": [
+                    "Manter e otimizar aplicativos existentes",
+                    "Criação de novas aplicações aplicando boas práticas e padrões de design utilizando Java e Go"
+                ]
+            },
+            "henry": {
+                "mentor": [
+                    "Organização de reuniões diárias e retrospectivas para avaliar o progresso da equipe dentro do framework SCRUM",
+                    "Avaliar e destacar pontos fortes e pontos de melhoria dos membros da equipe"
+                ],
+                "cra": [
+                    "Assistir à resolução de exercícios e promover a colaboração em grupo",
+                    "Preparação e apresentação de exercícios técnicos"
+                ]
+            }
+        }
+    },
+    "projects": {
+        "title": "Meus projetos",
+        "subtitle": "Estes são alguns dos projetos em que trabalhei",
+        "Henry-World-Web": "Versão web do Henry World na qual administradores e professores podem fazer alterações com mais facilidade e rapidez",
+        "Henry-World-App": "Versão mobile do Henry World que funciona como um campus virtual, no qual os alunos podem entrar para ver suas turmas, professores e muito mais",
+        "Wultur": "E-commerce de cursos de programação onde você pode comprar produtos, avaliá-los e adicionar ou deletar sendo administrador",
+        "Mercado-Henry": "Clone do Mercado Libre, onde você pode ver a especificação dos produtos trazidos pela sua API",
+        "Poke-Page": "Pokedex onde você pode conferir todos os pokémons com seus detalhes, os diferentes pokédex, regiões e filmes de pokémon",
+        "repo": "Visite repositório",
+        "site": "visite o site",
+        "footer": "Se você quiser ver todos os meus projetos visite meu Github"
+    },
+    "contact": {
+        "title": "Contate-me",
+        "message": "Mensagem",
+        "err": {
+            "incomplete": "Preencha todos os campos",
+            "notEmail": "Certifique-se de ter inserido um e-mail válido",
+            "cantSendEmail": "Não foi possível enviar o e-mail, tente novamente em alguns instantes"
+        },
+        "sended": "Obrigado por entrar em contato comigo, responderei em breve",
+        "send": "Enviar"
+    },
+    "button": {
+        "close": "Fechar",
+        "accept": "Aceitar"
+    }
+}

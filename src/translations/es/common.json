@@ -1,7 +1,8 @@
 {
     "languages":{
         "es": "Español",
-        "en": "Ingles"
+        "en": "Ingles",
+        "br": "Portugués"
     },
     "nav": {
         "about": "Sobre mi",
@@ -79,7 +80,7 @@
         "message": "Mensaje",
         "err": {
             "incomplete": "Complete todos los campos",
-            "notEmail": "Asegurece de haber ingresado un mail valido",
+            "notEmail": "Asegúrece de haber ingresado un mail valido",
             "cantSendEmail": "No se pudo enviar el mail, intente nuevamente en unos momentos"
         },
         "sended": "Gracias por contactarme, en breve te estare respondiendo",

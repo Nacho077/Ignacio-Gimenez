@@ -1,6 +1,7 @@
 {   "languages":{
         "es": "Spanish",
-        "en": "English"
+        "en": "English",
+        "br": "Portuguese"
     },
     "nav": {
         "about": "About Me",

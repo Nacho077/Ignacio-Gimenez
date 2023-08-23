@@ -7,6 +7,7 @@ import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 import common_es from './translations/es/common.json';
 import common_en from './translations/en/common.json';
+import common_br from './translations/br/common.json'
 
 i18next.init({
 	interpolation: {
@@ -19,6 +20,9 @@ i18next.init({
 		},
 		en: {
 			common: common_en
+		},
+		br: {
+			common: common_br
 		}
 	}
 })

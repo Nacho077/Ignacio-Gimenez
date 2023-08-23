@@ -12,7 +12,8 @@ const NavBar = () => {
     const [visibleMenu, setVisibleMenu] = useState(false)
     const languages = [
         {val: "es", name: t('languages.es')},
-        {val: "en", name: t('languages.en')}
+        {val: "en", name: t('languages.en')},
+        {val: "br", name: t('languages.br')}
     ]
     const routes = ["about", "skills", "experience", "projects", "contact"]
     const networks = [
