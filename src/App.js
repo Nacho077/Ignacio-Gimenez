@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import s from './app.module.css'
 
-
-//components
+// Components
 import NavBar from './components/NavBar'
 import Presentation from './components/presentation'
 import Skills from './components/skills'
@@ -44,15 +43,12 @@ const App = () => {
   }
 
   return (
-    <div className={s.container_app}>
-      <div className={s.container_navBar}>
-        <NavBar />
-        <div className={`${s.line} ${s.line_nav}`}></div>
-      </div>
+    <>
+      <NavBar />
       <div className={s.container_port}>
         {sections.map(section => (
-          <section key={section.name}>
-            <div id={section.name} className={s.separator}></div>
+          <section key={section.name} id={section.name}>
+            <div className={s.separator}></div>
             {<section.component openModal={openModal} />}
           </section>
         ))}
@@ -63,7 +59,8 @@ const App = () => {
           <Modal data={modalData} onClose={() => setModalOpen(false)}/>
         </div>
       }
-    </div>)
+    </>
+  )
 }
 
 

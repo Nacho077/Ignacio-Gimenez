@@ -2,15 +2,20 @@
     display: flex;
     justify-content: space-between;
     height: 4em;
-    background: #101010;
+    background: var(--bg-principal);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 10;
 }
 
 /* Menu */
-#title {
+.title {
     font-size: 30px;
+    flex: 0 0 auto;
     align-self: center;
     padding: 20px;
-    background-image: linear-gradient(90deg, rgba(255, 0, 0, .7), rgb(255, 255, 0));
+    background-image: var(--text-gradient);
     background-clip: text;
     color: transparent;
     font-weight: bolder;
@@ -20,41 +25,59 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 50px 0 10px;
-}
-
-.container_icon {
-    display: none;
-    color: #FFF;
-    cursor: pointer;
-    padding-top: 15px;
+    padding: 0 0 0 10px;
 }
 
 .container_links {
+    flex: 1;
     display: flex;
-    justify-content: space-evenly;
-    width: 95%;
+}
+
+.container_links > ul {
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.container_links > ul > li {
+    gap: 60px;
+    line-height: 65px;
+    display: inline-flex
 }
 
 .link {
-    padding: 20px;
     text-align: center;
     text-decoration: none;
-    color: #FFF;
+    color: var(--letter-color);
     text-transform: uppercase;
     font-weight: bolder;
+    transition: background-image 0.4s, color 0.4s;
 }
 
+.active_route,
 .link:hover {
-    background-image: linear-gradient(90deg, rgba(255, 0, 0, .7), rgb(255, 255, 0));
+    background-image: var(--text-gradient);
     background-clip: text;
     color: transparent;
+}
+
+.container_icon {
+    background-color: var(--bg-principal);
+}
+
+.close_icon {
+    background-color: var(--bg-menu-mobile);
 }
 
 .close_icon,
 .container_icon {
     display: none;
     cursor: pointer;
+    border: none;
+    color: var(--letter-color);
+    padding-top: 15px;
 }
 
 .container_icon > img,
@@ -70,22 +93,46 @@
     justify-self: flex-end;
     border: none;
     border-radius: 5px;
-    background: #101010;
-    color: white;
+    background: var(--bg-principal);
+    color: var(--letter-color);
     font-size: 18px;
 }
 
-.container_nertworks {
+.container_networks {
     display: none;
 }
 
-@media (max-width: 760px) {
+.line {
+    position: fixed;
+    top: 4em;
+    background: var(--letter-color);
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    margin-top: 0px;
+}
+
+@media (max-width: 820px) {
     .container_main {
         padding-left: 20px;
     }
 
     .container_menu {
-        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        background: var(--bg-menu-mobile);
+        width: 300px;
+        top: 0;
+        left: -300px;
+        transition: all .5s;
+        border-top-right-radius: 20px;
+        padding: 70px 0;
+        height: 100vh;
+    }
+
+    .title {
+        display: none;
     }
 
     .container_icon {
@@ -97,7 +144,7 @@
         position: absolute;
         right: 20px;
         top: 20px;
-        color: white;
+        color: var(--letter-color);
         cursor: pointer;
         display: unset;
         opacity: 1;
@@ -105,22 +152,17 @@
 
     .container_links {
         flex-direction: column;
+    }
+
+    .container_links > ul {
+        flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        position: absolute;
-        background: #000;
-        width: 300px;
-        height: 100vh;
-        padding-top: 30px;
-        top: 0;
-        left: -300px;
-        transition: all .5s;
-        border-top-right-radius: 20px;
     }
 
     .link {
         width: 150px;
-        padding: 20px;
+        line-height: 30px;
         text-align: left;
     }
 
@@ -128,22 +170,19 @@
         border-bottom: none;
     }
 
-    #menu_mobile {
+    .menu_mobile {
         left: 0;
     }
 
     .select {
-        margin-top: 10px;
-        margin-left: 20px;
         height: 50px;
-        background-color: black;
+        background-color: var(--bg-menu-mobile);
         align-self: flex-start
     }
 
-    .container_nertworks {
-        margin-top: 50px;
+    .container_networks {
+        margin-top: 20px;
         width: 100%;
-        display: unset;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -152,6 +191,10 @@
     .icon {
         width: 50px;
         height: 50px;
+    }
+
+    .line {
+        display: none;
     }
 }
 

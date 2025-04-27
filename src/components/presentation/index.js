@@ -7,33 +7,29 @@ import image from '../../assets/images/profile.jpeg'
 const Presentation = ({openModal}) => {
     const { t } = useTranslation('common')
 
-    const handleDownload = (fileUrl) => {
-        fetch(fileUrl)
-        .then(res => res.blob(fileUrl))
-        .then(blob => {
-            const fileURL = window.URL.createObjectURL(blob);
-            let alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = 'IgnacioGimenez.pdf';
-            alink.click();
-        })
-    }
-
     const handleModal = () => {
         openModal({
             text: t('presentation.languageSelection.text'),
             buttons: [
                 {
-                    text: t('languages.es'),
-                    onClick: () => {
-                        handleDownload('../../assets/cvs/IgnacioGimenezEs.pdf')
-                    }
+                    text: 
+                    <a
+                        href="https://drive.google.com/uc?export=download&id=1E7u_HMMNJ3uaqYuNYwZ1oUbE2mv-nXG8"
+                        download
+                        className={s.link}
+                        >
+                            {t('languages.es')}
+                    </a>
                 },
                 {
-                    text: t('languages.en'),
-                    onClick: () => {
-                        handleDownload('../../assets/cvs/IgnacioGimenezEn.pdf')
-                    }
+                    text:
+                    <a
+                        href="https://drive.google.com/uc?export=download&id=1jAL57YOLNnbBjx57LTaMUWJRu9RPdAQd"
+                        download
+                        className={s.link}
+                        >
+                            {t('languages.en')}
+                    </a>
                 }
             ]
         })
