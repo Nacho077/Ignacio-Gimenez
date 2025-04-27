@@ -14,17 +14,13 @@ const NavBar = () => {
         // Observers for link color animation
         const sections = document.querySelectorAll('section')
 
-        const observer = new IntersectionObserver(
-            (entries) => {
+        const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         setActiveSection(entry.target.id)
                     }
                 })
-            },
-            {
-                threshold: 0.3
-            }
+            }, {threshold: 0.3}
         )
 
         sections.forEach(section => observer.observe(section))
