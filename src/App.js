@@ -16,23 +16,23 @@ const App = () => {
 
   const sections = [{
       name: "about",
-      component: Presentation
+      Component: Presentation
     },
     {
       name: "skills",
-      component: Skills
+      Component: Skills
     },
     {
       name:"experience",
-      component: Experience
+      Component: Experience
     },
     {
       name: "projects",
-      component: Projects
+      Component: Projects
     },
     {
       name: "contact",
-      component: Contact
+      Component: Contact
     }
   ]
 
@@ -45,15 +45,9 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <div className={s.container_port}>
-        {sections.map(section => (
-          <section key={section.name} id={section.name}>
-            <div className={s.separator}></div>
-            {<section.component openModal={openModal} />}
-          </section>
-        ))}
-        <div className={s.separator}></div>
-      </div>
+      <main className={s.container_port}>
+        {sections.map(({name, Component}) => <Component openModal={openModal} id={name} key={name}/>)}
+      </main>
       {isModalOpen && 
         <div className={s.container_modal}>
           <Modal data={modalData} onClose={() => setModalOpen(false)}/>

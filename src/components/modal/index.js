@@ -3,7 +3,7 @@ import s from './modal.module.css'
 
 const Modal = ({data:{text, buttons}, onClose}) => {
     return (
-        <div className={s.container_main}>
+        <section className={s.container_main}>
             <div className={s.container}>
                 <button className={s.container_close} onClick={onClose}>
                     <img src={closeIcon} alt="close icon" />
@@ -15,17 +15,17 @@ const Modal = ({data:{text, buttons}, onClose}) => {
                     {buttons?.map(button => (
                         <button
                         key={button.text}
-                        className={s.btn}
+                        className={`btn ${s.btn}`}
                         onClick={() => {
                             button.onClick && button.onClick() 
                             onClose()}}
                         >
-                            {button.text}
+                            {button.content}
                         </button>
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

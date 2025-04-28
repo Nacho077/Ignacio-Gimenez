@@ -1,51 +1,40 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import s from './presentation.module.css'
+import { cvs } from './presentation.constants'
 
 import image from '../../assets/images/profile.jpeg'
 
-const Presentation = ({openModal}) => {
+import s from './presentation.module.css'
+
+const Presentation = ({openModal, id}) => {
     const { t } = useTranslation('common')
 
     const handleModal = () => {
         openModal({
             text: t('presentation.languageSelection.text'),
-            buttons: [
-                {
-                    text: 
-                    <a
-                        href="https://drive.google.com/uc?export=download&id=1E7u_HMMNJ3uaqYuNYwZ1oUbE2mv-nXG8"
-                        download
-                        className={s.link}
-                        >
-                            {t('languages.es')}
-                    </a>
-                },
-                {
-                    text:
-                    <a
-                        href="https://drive.google.com/uc?export=download&id=1jAL57YOLNnbBjx57LTaMUWJRu9RPdAQd"
-                        download
-                        className={s.link}
-                        >
-                            {t('languages.en')}
-                    </a>
-                }
-            ]
+            buttons: cvs.map(cv => ({
+                content:
+                <a
+                    href={cv.link}
+                    className={s.link}
+                    download
+                >
+                    {t(`languages.${cv.language}`)}
+                </a>
+            }))
         })
     }
 
     return (
-        <div className={s.container_main}>
+        <section id className={s.container_main}>
             <div className={s.container}>
-                <div className={s.container_photo}>
-                    <div className={s.photo}>
-                        <img src={image} alt="Ignacio Gimenez" />
-                    </div>
+                <div className={s.photo}>
+                    <img src={image} alt="Ignacio Gimenez" />
                 </div>
                 <button
                     onClick={handleModal}
-                    className={s.btn}
+                    className={"btn"}
+                    aria-label="Download Curriculum Vitae"
                 >
                     {t('presentation.download')}
                 </button>
@@ -59,7 +48,7 @@ const Presentation = ({openModal}) => {
                     {t("presentation.resume")}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
