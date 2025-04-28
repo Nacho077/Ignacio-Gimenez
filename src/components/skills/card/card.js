@@ -1,15 +1,19 @@
 import React from 'react'
+
 import s from './card.module.css'
 
-const Card = ({ img, name }) => (
-    <div className={`${s.container_logo}`}>
+const Card = ({ t, img, name, type }) => (
+    <li className={`${s.card}`}>
+        <span className={`${s.badge}  ${s[`badge_${type}`]}`}>
+            {t(`skills.badges.${type}`)}
+        </span>
         <img
             src={img}
             className={`${s.img} ${s[name]}`}
             alt={name}
         />
-        <h3 className={s.subtitle}>{name}</h3>
-    </div>
+        <p className={s.subtitle}>{name}</p>
+    </li>
 )
 
 export default Card

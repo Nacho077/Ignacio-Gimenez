@@ -26,7 +26,7 @@ const Presentation = ({openModal, id}) => {
     }
 
     return (
-        <section id className={s.container_main}>
+        <section id={id} className={s.container_main}>
             <div className={s.container}>
                 <div className={s.photo}>
                     <img src={image} alt="Ignacio Gimenez" />

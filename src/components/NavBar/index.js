@@ -8,7 +8,7 @@ import s from './navBar.module.css'
 const NavBar = () => {
     const { t, i18n } = useTranslation('common')
     const [visibleMenu, setVisibleMenu] = useState(false)
-    const [activeSection, setActiveSection] = useState('')
+    const [activeSection, setActiveSection] = useState('about')
 
     useEffect(() => {
         // Observers for link color animation
@@ -20,7 +20,7 @@ const NavBar = () => {
                         setActiveSection(entry.target.id)
                     }
                 })
-            }, {threshold: 0.3}
+            }, {threshold: 0.2}
         )
 
         sections.forEach(section => observer.observe(section))

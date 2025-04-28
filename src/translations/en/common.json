@@ -22,6 +22,20 @@
         "sections": {
             "dataBase": "Data Base",
             "tools": "Tools"
+        },
+        "badges": {
+            "language": "Lenguage",
+            "framework": "Framework",
+            "library": "Library",
+            "database": "Data Base",
+            "query": "Query",
+            "container": "Container",
+            "styles": "Styles",
+            "tool": "Tool",
+            "monitoring": "Monitoring",
+            "hosting": "Hosting",
+            "ai": "Artificial Intelligence",
+            "analytics": "Data Analytics"
         }
     },
     "experience": {

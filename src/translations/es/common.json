@@ -23,6 +23,20 @@
         "sections": {
             "dataBase": "Bases de datos",
             "tools": "Herramientas"
+        },
+        "badges": {
+            "language": "Lenguaje",
+            "framework": "Framework",
+            "library": "Libreria",
+            "database": "Base de Datos",
+            "query": "Query",
+            "container": "Contenedor",
+            "styles": "Estilos",
+            "tool": "Herramienta",
+            "monitoring": "Monitoreo",
+            "hosting": "Hosting",
+            "ai": "Inteligencia Artificial",
+            "analytics": "Analisis de Datos"
         }
     },
     "experience": {

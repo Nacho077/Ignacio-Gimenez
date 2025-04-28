@@ -1,9 +1,32 @@
-.container_logo {
+.card {
+    position: relative;
     width: 150px;
     height: 200px;
     display: flex;
     flex-direction: column;
     transition: all ease .5s;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--bg-principal);
+    color: var(--letter-color);
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateX(150%) scale(0.8);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.card:hover .badge {
+    opacity: 1;
+    transform: translateX(0) scale(1);
 }
 
 .img {
@@ -14,7 +37,75 @@
     filter: grayscale(100%) saturate(200%) brightness(2);
 }
 
-.express {
+.subtitle {
+    color: var(--letter-color);
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 0;
+}
+
+.card:hover {
+    background: white;
+    box-shadow: 10px 10px red;
+}
+
+.card:hover .img {
+    filter: none;
+}
+
+.card:hover .subtitle {
+    color: black;
+}
+
+.badge_language {
+    background-color: #007BFF;
+}
+
+.badge_framework {
+    background-color: #6F42C1;
+}
+
+.badge_library {
+    background-color: #17A2B8;
+}
+
+.badge_database {
+    background-color: #28A745;
+}
+
+.badge_query {
+    background-color: #20C997;
+}
+
+.badge_container {
+    background-color: #FD7E14;
+}
+
+.badge_styles {
+    background-color: #FFC107;
+}
+
+.badge_tool {
+    background-color: #6C757D;
+}
+
+.badge_monitoring {
+    background-color: #6610F2;
+}
+
+.badge_hosting {
+    background-color: #343A40;
+}
+
+.badge_ai {
+    background-color: #FF4C68;
+}
+
+.express,
+.openAI,
+.MCP,
+.vercel {
     filter: invert();
 }
 
@@ -22,32 +113,16 @@
 .html5,
 .firebase,
 .postgreSQL,
+.camel,
+.mongoDB,
+.googleBI,
+.heroku,
 .docker {
     filter: grayscale(100%) saturate(200%);
 }
 
 .typeScript,
+.datadog,
 .github {
     filter: invert() brightness(10);
-}
-
-.subtitle {
-    color: white;
-    text-transform: capitalize;
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 0;
-}
-
-.container_logo:hover {
-    background: white;
-    box-shadow: 10px 10px red;
-}
-
-.container_logo:hover .img {
-    filter: none;
-}
-
-.container_logo:hover .subtitle {
-    color: black;
 }
