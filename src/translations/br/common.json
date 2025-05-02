@@ -49,13 +49,18 @@
         },
         "time": {
             "february": "Fevereiro",
+            "march": "Março",
             "april": "Abril",
             "may": "Maio",
             "june": "Junho",
             "current": "Presente"
         },
-        "responsibilities": {
+        "responsabilities": {
             "mercado-libre": {
+                "sr": [
+                    "Definir diretrizes técnicas e apoiar outros desenvolvedores em decisões-chave de arquitetura e boas práticas",
+                    "Propor melhorias de arquitetura, contribuir ativamente nas decisões de produto"
+                ],
                 "ssr": [
                     "Analisar a infraestrutura dos projetos com foco em escalabilidade e performance",
                     "Implementação e monitoramento de alarmes e métricas em Datadog para monitoramento de processos e escalabilidade de aplicações"

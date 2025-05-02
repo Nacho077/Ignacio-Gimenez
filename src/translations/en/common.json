@@ -48,13 +48,18 @@
         },
         "time": {
             "february": "February",
+            "march": "March",
             "april": "April",
             "may": "May",
             "june": "June",
             "current": "Currently"
         },
-        "responsibilities": {
+        "responsabilities": {
             "mercado-libre": {
+                "sr": [
+                    "Define technical guidelines and support other developers in key architecture and best-practice decisions",
+                    "Propose architectural improvements, actively contribute to product decision-making"
+                ],
                 "ssr": [
                     "Analyze the infrastructure of the projects focusing on scalability and performance",
                     "Implementation and monitoring of alarms and metrics in Datadog for process monitoring and application scalability"
