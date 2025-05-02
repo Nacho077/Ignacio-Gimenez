@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import menuIcon from '../../assets/images/icons/menu.svg'
 import closeIcon from '../../assets/images/icons/close.svg'
-import { routes, languages, networks } from './navBar.constants'
+import { languages, networks } from './navBar.constants'
 import s from './navBar.module.css'
 
-const NavBar = () => {
+const NavBar = ({ routes }) => {
     const { t, i18n } = useTranslation('common')
     const [visibleMenu, setVisibleMenu] = useState(false)
     const [activeSection, setActiveSection] = useState('about')
@@ -56,15 +56,15 @@ const NavBar = () => {
                         </button>
 
                         <ul>
-                            {routes.map(route => (
-                                <li key={route}>
+                            {routes.map(({ name }) => (
+                                <li key={name}>
                                     <a
-                                        href={`#${route}`}
-                                        className={`${s.link} ${activeSection === route ? s.active_route : ''}`}
+                                        href={`#${name}`}
+                                        className={`${s.link} ${activeSection === name ? s.active_route : ''}`}
                                         onClick={() => setVisibleMenu(false)}
-                                        aria-current={activeSection === route ? 'page' : undefined}
+                                        aria-current={activeSection === name ? 'page' : undefined}
                                     >
-                                        {t(`nav.${route}`)}
+                                        {t(`nav.${name}`)}
                                     </a>
                                 </li>
                             ))}

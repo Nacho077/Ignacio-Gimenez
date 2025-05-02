@@ -2,8 +2,6 @@ import gitHubIcon from '../../assets/images/icons/github.svg'
 import linkedInIcon from '../../assets/images/icons/linkedin.svg'
 import emailIcon from '../../assets/images/icons/email.svg'
 
-export const routes = ["about", "skills", "experience", "projects", "contact"]
-
 export const languages = [
     {val: "es", name: 'languages.es'},
     {val: "en", name: 'languages.en'},

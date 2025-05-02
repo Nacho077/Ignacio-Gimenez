@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <>
-      <NavBar />
+      <NavBar routes={sections} />
       <main className={s.container_port}>
         {sections.map(({name, Component}) => <Component openModal={openModal} id={name} key={name}/>)}
       </main>
