@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { networks } from './contact.constants'
 import * as emailjs from 'emailjs-com'
-import gitHubIcon from '../../assets/images/icons/github.svg'
-import linkedInIcon from '../../assets/images/icons/linkedin.svg'
-import emailIcon from '../../assets/images/icons/email.svg'
 import s from './contact.module.css'
 
-const Contact = ({openModal}) => {
+const Contact = ({id, openModal}) => {
     const { REACT_APP_EMAIL_SERVICE, REACT_APP_EMAIL_TEMPLATE, REACT_APP_EMAIL_KEY } = process.env
     const [state, setState] = useState({
         input: '',
@@ -14,23 +12,6 @@ const Contact = ({openModal}) => {
         inputFocus: false
     })
     const { t } = useTranslation('common')
-    const networks = [
-        {
-            name: "Github",
-            link: "https://github.com/Nacho077",
-            icon: gitHubIcon
-        },
-        {
-            name: "Linkedin",
-            link: "https://www.linkedin.com/in/ignacio-gimenez-305799184/",
-            icon: linkedInIcon
-        },
-        {
-            name: "ignaciogimenez70@gmail.com",
-            link: "mailto:ignaciogimenez70@gmail.com",
-            icon: emailIcon
-        }
-    ]
 
     const handleChanges = e => {
         setState({
@@ -105,8 +86,8 @@ const Contact = ({openModal}) => {
     }
 
     return (
-        <div className={s.container_main}>
-            <h1 className="title">{t("contact.title")}</h1>
+        <section id={id} className={s.container_main}>
+            <h2 className="title">{t("contact.title")}</h2>
             <div className={s.container_form}>
                 <div className={s.container_input}>
                     <input
@@ -147,7 +128,7 @@ const Contact = ({openModal}) => {
                         border: `1px solid ${state.text ? '#e78133' : '#555'}`
                     }}
                 />
-                <button className={s.btn} onClick={handleSend}>{t('contact.send')}</button>
+                <button className={"btn"} onClick={handleSend}>{t('contact.send')}</button>
             </div>
             <div className={s.container_links}>
                 {networks.map(network => (
@@ -163,7 +144,7 @@ const Contact = ({openModal}) => {
                     </a>
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -46,7 +46,7 @@ const Card = ({ project: { img, title, links, skills, video }, index }) => {
                     {links?.repo &&
                         <a
                             href={links.repo}
-                            className={s.btn}
+                            className={"btn"}
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -55,7 +55,7 @@ const Card = ({ project: { img, title, links, skills, video }, index }) => {
                     {links?.site &&
                         <a
                             href={links.site}
-                            className={s.btn}
+                            className={"btn"}
                             target="_blank"
                             rel="noreferrer"
                         >

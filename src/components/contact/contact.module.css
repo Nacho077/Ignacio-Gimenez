@@ -65,22 +65,10 @@
     border: 1px solid #e78133;
 }
 
-.btn{
+.container_form > button {
     width: 150px;
     height: 50px;
-    border-radius: 0;
-    padding: 8px;
-    margin: 20px auto;
-    cursor: pointer;
-    transition: all ease .5s;
-    border: none;
-}
-
-.btn:hover{
-    width: 150px;
-    height: 50px;
-    background: white;
-    box-shadow: 5px 5px red;
+    align-self: center;
 }
 
 .container_links{
