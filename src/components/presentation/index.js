@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { cvs } from './presentation.constants'
 
-import image from '../../assets/images/profile.jpeg'
+import image from '../../assets/images/profile.png'
 
 import s from './presentation.module.css'
 
