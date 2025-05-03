@@ -7,13 +7,12 @@ const Card = ({ project: { img, title, links, skills, video }, index }) => {
     const name = title.split("-").join(" ")
 
     return (
-        <div
+        <article
             id={title}
             className={s.container_main}
         >
             <div
                 className={s.container_img}
-                style={{ flexDirection: index % 2 === 0 ? 'row-reverse' : 'row' }}
             >
                 <video
                     className={s.frame}
@@ -64,7 +63,7 @@ const Card = ({ project: { img, title, links, skills, video }, index }) => {
                         </a>}
                 </div>
             </div>
-        </div>
+        </article>
     )
 }
 
